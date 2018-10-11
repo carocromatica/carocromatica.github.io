@@ -8,40 +8,20 @@ html, body{
   background-size: cover;
 }
 
-
-
-
 @media (min-width: 320px) and (max-width: 480px) {
   
-  .logo2{
-    display: none;
-  }
+.logo2{
+  display: none;
+}
   
 }
-
-
-
-
 #header{
   min-height: 100vh;
   position: relative;
 }
 
 #about{
-  min-height: 100vh;
   position: relative;
   z-index: 300;
 }
 
-.fondo{
-  position: absolute;
-  background-color: dimgrey;
-  z-index: 100;
-  min-height: 300vh;
-}
-
-.magia{
-  position: absolute;
-  z-index: 500;
- 
-}
