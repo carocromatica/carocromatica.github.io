@@ -3,17 +3,45 @@ html, body{
   margin:0;
   display: flex;
   flex-direction: column;
+  background-image: url(./fondo.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  .logo2{
+    display: none;
+  }
+  
+}
+
+
 
 
 #header{
   min-height: 100vh;
-  background-color: green;
   position: relative;
 }
 
 #about{
   min-height: 100vh;
-  background-color: pink;
   position: relative;
+  z-index: 300;
+}
+
+.fondo{
+  position: absolute;
+  background-color: dimgrey;
+  z-index: 100;
+  min-height: 300vh;
+}
+
+.magia{
+  position: absolute;
+  z-index: 500;
+ 
 }
