@@ -1,5 +1,5 @@
 html, body{
-  height:100%;
+  width:100%;
   margin:0;
   display: flex;
   flex-direction: column;
@@ -17,11 +17,11 @@ html, body{
 }
 #header{
   min-height: 100vh;
-  position: relative;
+
 }
 
 #about{
-  position: relative;
-  z-index: 300;
+
+
 }
 
