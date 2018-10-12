@@ -1,11 +1,14 @@
 html, body{
-  max-width:100%;
+  
+  height:100%;
   margin:0;
   display: flex;
   flex-direction: column;
   background-image: url(./fondo.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -17,17 +20,55 @@ html, body{
 }
 #header{
   min-height: 100vh;
-
 }
 
-#about{
+.bio{
 
-
-
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
 #about p{
-  font-size: 1.5em;
+  font-size:1.5em;
   padding-top: 15%;
+}
+
+.head-projects{
+  padding-top: 50px;
+  background-image: url(./svg/fondo_projects.svg);
+  height: 120px;
+  border: 0px;
+}
 
 
+.asd{
+  height: 500px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+
+
+
+nav{
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0), 0 3px 1px -2px rgba(0,0,0,0), 0 1px 5px 0 rgba(133, 73, 73, 0);
+   box-shadow: 0 2px 2px 0 rgba(0,0,0,0), 0 3px 1px -2px rgba(0,0,0,0), 0 1px 5px 0 rgba(0,0,0,0);
+}
+
+nav .sidenav-trigger {
+  float: right;
+
+}
+
+.sidenav-overlay {
+
+  background-color: rgba(255,73,92,0.5);
+  z-index: 50; 
+ 
 }
