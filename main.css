@@ -13,11 +13,10 @@ html, body{
 
 @media (min-width: 320px) and (max-width: 480px) {
   
-.logo2{
-  display: none;
+
 }
   
-}
+
 #header{
   min-height: 100vh;
 }
@@ -62,7 +61,7 @@ html, body{
   -ms-flex-align: center;
   align-items: center;
 }
-/* framework*/
+/* fram*/
 
 
 
