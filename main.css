@@ -34,12 +34,22 @@ html, body{
 }
 
 .head-projects{
-  padding-top: 50px;
+  padding-top: 100px;
   background-image: url(./svg/fondo_projects.svg);
-  height: 120px;
   border: 0px;
+  background-repeat: no-repeat;
+  padding-bottom: 100px;
 }
 
+.projects{
+
+}
+
+.project{
+  background-image: url(./svg/circle2.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 .asd{
   height: 500px;
@@ -52,7 +62,7 @@ html, body{
   -ms-flex-align: center;
   align-items: center;
 }
-
+/* framework*/
 
 
 
