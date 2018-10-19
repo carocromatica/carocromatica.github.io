@@ -8,7 +8,8 @@
   <title>Carocromatica</title>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="./materialize/css/materialize.min.css">
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="carousel.css">
@@ -18,42 +19,28 @@
   <div class="navbar-fixed">
     <nav class="grey darken-4">
       <div class="container">
-        <a href="#" class="brand-logo">
+        <a href="#" class="brand-logo left">
           <img src="./svg/logo.svg" alt="Carocromatica" class="responsive-img">
         </a>
-        <ul id="slide-out" class="sidenav">
 
+        <ul id="nav-mobile" class="right">
           <li>
-            <a href="index.html">
-              <i class="material-icons white-text text-darken-1">person</i> Perfil</a>
-
-            <a href="#about">
-              <i class="material-icons white-text text-darken-1">map</i> Mapa</a>
-
-            <a href="#projects">
-              <i class="material-icons white-text text-darken-1">star</i> Ranking</a>
-
-            <a href="#contact">
-              <i class="material-icons white-text text-darken-1">card_giftcard</i> Canje</a>
-
-
-            <a href="#" onclick="cerrarSesion()">
-
-              <i class="material-icons white-text text-darken-1">exit_to_app</i> Cerrar Sesión</a>
+            <a href="#about">Sobre mi</a>
+          </li>
+          <li>
+            <a href="#projects">Proyectos</a>
+          </li>
+          <li>
+            <a href="#contact">Contacto</a>
           </li>
         </ul>
-
-        <div>
-          <a data-target="slide-out" class="sidenav-trigger show-on-large">
-            <i class="large material-icons">menu</i>
-          </a>
-        </div>
       </div>
     </nav>
   </div>
 
 
-  <div> <!--div fluid-->
+  <div>
+    <!--div fluid-->
     <section id="header" class="row">
       <div class="container">
         <div class="col s12 m6">
@@ -67,37 +54,59 @@
 
     <section id="about" class="row">
       <div class="container">
+          <h5 class="center-align blue-grey-text">Sobre mi</h5>
         <div class="col s12 m6">
-          <img src="./svg/foto.svg" class="responsive-img">
+          <img src="./svg/foto.png" class="responsive-img">
         </div>
         <div class="col s12 m6">
-          <p>Hola! me llamo Carolina, Desarrolladora Front-end y Diseñadora Gráfica de profesión. Entusiasta de la tecnología,
-            las comunicaciones y el diseño visual. Mi foco es desarrollar soluciones óptimas e innovadoras en aplicaciones
-            y experiencias digitales. Soy colaborativa, proactiva y creativa. Estoy en un constante proceso de aprendizaje;
-            la investigación y la experimentación son clave para seguir creciendo profesionalmente.</p>
+          <p>Hola! me llamo Carolina Torres, aunque me puedes encontrar como Carocromatica. Soy Desarrolladora Front-end y Diseñadora Gráfica de profesión. Entusiasta de la tecnología,las comunicaciones y el diseño visual. Mi foco es desarrollar soluciones óptimas e innovadoras en aplicaciones y experiencias digitales. Soy colaborativa, proactiva y creativa. Estoy en un constante proceso de aprendizaje;
+            la investigación y la experimentación son clave para seguir creciendo profesionalmente.
+          </br>Puedes descarcar mi CV Aquí y encontrarme en <i class="fab fa-github-alt"></i> <i class="fab fa-behance"></i> <i class="fab fa-linkedin-in"></i> </p>
         </div>
       </div>
     </section>
 
-
-
     <section id="skills" class="row">
-      
-        <h5 class="center-align">Tech Skills</h5>
-      <div class="container center-align">
-        <div class="col s4 m2 l2 "><img src="./svg/js.png" alt="JavaScript" class="responsive-img"></div>
-        <div class="col s4 m2 l2 "><img src="./svg/html.png" alt="HTML5" class="responsive-img"></div>
-        <div class="col s4 m2 l2 "><img src="./svg/css.png" alt="CSS3" class="responsive-img"></div>
-        <div class="col s4 m2 l2 "><img src="./svg/react.png" alt="REACT.js" class="responsive-img"></div>
-        <div class="col s4 m2 l2 "><img src="./svg/firebase.png" alt="FIREBASE" class="responsive-img"></div>
-        <div class="col s4 m2 l2 "><img src="./svg/materialize.png" alt="Materialize" class="responsive-img"></div>
 
-        <div class="col s4 m2 l2 "><img src="./svg/bootstrap.png" alt="Bootstrap" class="responsive-img"></div>
-        <div class="col s4 m2 l2 "><img src="./svg/git.png" alt="Git" class="responsive-img"></div>
-        <div class="col s4 m2 l2 "><img src="./svg/github.png" alt="GitHub" class="responsive-img"></div>
-        <div class="col s4 m2 l2 "><img src="./svg/photoshop.png" alt="photoshop" class="responsive-img"></div>
-        <div class="col s4 m2 l2 "><img src="./svg/illustrator.png" alt="illustrator" class="responsive-img"></div>
-        <div class="col s4 m2 l2 "><img src="./svg/xd.png" alt="Adobe XD" class="responsive-img"></div>
+      <h5 class="center-align blue-grey-text">Tech Skills</h5>
+      <div class="container center-align">
+        <div class="col s4 m2 l2 ">
+          <img src="./svg/js.png" alt="JavaScript" class="responsive-img">
+        </div>
+        <div class="col s4 m2 l2 ">
+          <img src="./svg/html.png" alt="HTML5" class="responsive-img">
+        </div>
+        <div class="col s4 m2 l2 ">
+          <img src="./svg/css.png" alt="CSS3" class="responsive-img">
+        </div>
+        <div class="col s4 m2 l2 ">
+          <img src="./svg/react.png" alt="REACT.js" class="responsive-img">
+        </div>
+        <div class="col s4 m2 l2 ">
+          <img src="./svg/firebase.png" alt="FIREBASE" class="responsive-img">
+        </div>
+        <div class="col s4 m2 l2 ">
+          <img src="./svg/materialize.png" alt="Materialize" class="responsive-img">
+        </div>
+
+        <div class="col s4 m2 l2 ">
+          <img src="./svg/bootstrap.png" alt="Bootstrap" class="responsive-img">
+        </div>
+        <div class="col s4 m2 l2 ">
+          <img src="./svg/git.png" alt="Git" class="responsive-img">
+        </div>
+        <div class="col s4 m2 l2 ">
+          <img src="./svg/github.png" alt="GitHub" class="responsive-img">
+        </div>
+        <div class="col s4 m2 l2 ">
+          <img src="./svg/photoshop.png" alt="photoshop" class="responsive-img">
+        </div>
+        <div class="col s4 m2 l2 ">
+          <img src="./svg/illustrator.png" alt="illustrator" class="responsive-img">
+        </div>
+        <div class="col s4 m2 l2 ">
+          <img src="./svg/xd.png" alt="Adobe XD" class="responsive-img">
+        </div>
 
 
       </div>
@@ -105,21 +114,21 @@
 
     <section id="projects">
 
-      <h5 class="center-align">PROYECTOS REALIZADOS</h5>
+      <h5 class="center-align blue-grey-text">Proyectos Realizados</h5>
 
       <!--Eco go-->
 
       <div class="row">
         <div class="container">
           <div class="col s12 m6 l6">
-         <img src="./svg/ecogo.png" alt="ecoGO" class="responsive-img">
+            <img src="./svg/ecogo.png" alt="ecoGO" class="responsive-img">
           </div>
           <div class="col s12 m6 l6">
-              <h3>EcoGO!</h3>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-              <p>#tag #tag #tag #tag #tag #tag #tag #tag #tag #tag</p>
-              <button>DEMO</button>
-              <button>Documentacion</button>
+            <h3>EcoGO!</h3>
+            <p>EcoGO! fue el proyecto ganador de la Hackaton "Open House Laboratoria".Es una propuesta que busca incentivar el reciclaje a través de la gamificación y utilizando las API de geolocalización de HERE . Desarrollado totalmente con JavaScript, el proyecto además utiliza validación con QR, autentificación y almacenamiento de datos en Firebase y conexión a Facebook .</p>
+      
+            <a class="waves-effect waves-light btn orange darken-1" href="https://carocromatica.github.io/Proyecto-Here/" target="_blank"><i class="fas fa-play-circle"></i> Demo</a>
+            <a class="waves-effect waves-light btn orange darken-1" href="https://github.com/carocromatica/Proyecto-Here" target="_blank"><i class="fas fa-code"></i> Code</a>
           </div>
         </div>
       </div>
@@ -129,16 +138,16 @@
       <div class="row">
         <div class="container">
           <div class="col s12 m6 l6">
-              <img src="./svg/synapp.png" alt="ecoGO" class="responsive-img">
+            <img src="./svg/synapp.png" alt="ecoGO" class="responsive-img">
           </div>
           <div class="col s12 m6 l6">
 
-              <h3>Synapse Social Network</h3>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-              <p>#tag #tag #tag #tag #tag #tag #tag #tag #tag #tag</p>
-              <button>DEMO</button>
-              <button>Documentacion</button>
-             
+            <h3>Synapse Social Network</h3>
+            <p>Synapse es una red social enfocada al aprendizaje. Desarrollada con React, cuenta con autentificación con Firebase, Google.</p>
+     
+            <a class="waves-effect waves-light btn orange darken-1" href="https://carocromatica.github.io/synapp/" target="_blank"><i class="fas fa-play-circle"></i> Demo</a>
+            <a class="waves-effect waves-light btn orange darken-1" href="https://github.com/carocromatica/synapp" target="_blank"><i class="fas fa-code"></i> Code</a>
+
           </div>
         </div>
       </div>
@@ -148,64 +157,70 @@
       <div class="row">
         <div class="container">
           <div class="col s12 m6 l6">
-              <img src="./svg/translab.png" alt="ecoGO" class="responsive-img">
+            <img src="./svg/translab.png" alt="ecoGO" class="responsive-img">
           </div>
           <div class="col s12 m6 l6">
-              <h3>Translab</h3>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-              <p>#tag #tag #tag #tag #tag #tag #tag #tag #tag #tag</p>
-              <button>DEMO</button>
-              <button>Documentacion</button>
+            <h3>Translab</h3>
+            <p>Translab es un pequeño, pero práctico proyecto que simula una APP. Su objetivo es almacenar y calcular las cargas de las tarjetas Bip! Utiliza Firebase, consumo de API y desarrollado totalmente con JavaScript</p>
+     
+            <a class="waves-effect waves-light btn orange darken-1" href="https://carocromatica.github.io/TranslabFirebase/src/" target="_blank"><i class="fas fa-play-circle"></i> Demo</a>
+            <a class="waves-effect waves-light btn orange darken-1" href="https://github.com/carocromatica/TranslabFirebase" target="_blank"><i class="fas fa-code"></i> Code</a>
           </div>
         </div>
       </div>
 
     </section>
 
-  </div><!--fin div fluid-->
+  </div>
+  <!--fin div fluid-->
 
 
-  <footer>
+  <footer id="contact">
 
-      <div class="row">
-          <h5 class="center-align">Contacto</h5>
-          <div class="container">
-            <div class="col s12 m6 l6 blue">
-                <i class="far fa-envelope"></i>
-                <i class="fab fa-github-alt"></i>
-                <i class="fab fa-behance"></i>
-                <i class="fab fa-linkedin-in"></i>
-                <i class="far fa-file-alt"></i>
-                
-            </div>
-            <div class="col s12 m6 l6 red">
+    <div class="row">
+      <h5 class="center-align blue-grey-text">Contacto</h5>
+      <div class="container center-align">
 
-                <!-- Modal Trigger -->
-   <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
-            
-                
-            </div>
-          </div>
+
+        <div class="col s4 m2 l2 ">
+          <a href="mailto:ca.torresduran@gmail.com">
+          <i class="far fa-envelope medium"></i>
+          <p>Email</p> </a>
         </div>
-  
-  
-  </footer> 
+        <div class="col s4 m2 l2 ">
+         <a href="https://carocromatica.github.com" target="_blank">
+            <i class="fab fa-github-alt medium"></i>
+          <p>GitHub</p>
+         </a>
+        </div>
+        <div class="col s4 m2 l2 ">
+          <a href="https://www.behance.net/carocromatica" target="_blank"> <i class="fab fa-behance medium"></i>
+            <p>Behance</p></a>
+         
+        </div>
+        <div class="col s4 m2 l2 ">
+          <a href="https://www.linkedin.com/in/carocromatica/" target="_blank">
+          <i class="fab fa-linkedin-in medium"></i>
+          <p>LinkedIn</p></a>
+        </div>
+        <div class="col s4 m2 l2 ">
+          <i class="far fa-file-alt medium"></i>
+          <p>Curriculum</p>
+        </div>
+        <div class="col s4 m2 l2 ">
+          <a href="https://twitter.com/carocromatica" target="_blank">
+            <i class="fab fa-twitter medium"></i>
+            <p>Twitter</p></a>
+          </div>
 
- 
 
-   <!-- Modal Structure -->
-   <div id="modal1" class="modal">
-     <div class="modal-content">
-        <form method="POST" action="https://formspree.io/ca.torresduran@gmail.com">
-          <input type="email" name="email" placeholder="Your email">
-          <textarea name="message" placeholder="Your message"></textarea>
-          <button type="submit">Send</button>
-        </form>
-     </div>
-     <div class="modal-footer">
-       <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-     </div>
-   </div>
+      </div>
+    </div>
+
+
+  </footer>
+
+
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
