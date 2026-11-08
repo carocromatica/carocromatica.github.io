@@ -424,3 +424,43 @@ body:not(.dormida) .despierta-msg { opacity: 0; transition: opacity .3s; animati
 /* Mientras Caro duerme no se ve nada más: ni navbar, ni secciones, ni caritas, ni barra de scroll */
 html:has(body.dormida) { overflow: hidden; }
 body.dormida .nav, body.dormida main > section:not(.hero), body.dormida footer, body.dormida .caritas3d { display: none; }
+
+/* ========== indexsparkmo: movimiento con mo.js (las animaciones las hace la librería, no el CSS) ========== */
+body.mo .hero-texto, body.mo .nav ul, body.mo .nav-logo { animation: none !important; opacity: 0; }
+body.mo .disenadora-hero { animation: none !important; opacity: 0; }
+body.mo.dormida .nav, body.mo.dormida .hero-texto { pointer-events: none; }
+.sin-mo body.mo .hero-texto, .sin-mo body.mo .nav ul, .sin-mo body.mo .nav-logo, .sin-mo body.mo .disenadora-hero { opacity: 1; }
+.zzz { position: absolute; left: 62%; top: 12%; font: 700 1.6rem/1 'Lexend', system-ui, sans-serif; color: var(--teal); pointer-events: none; z-index: 5; }
+.excl { position: absolute; left: 50%; top: -6%; margin-left: -.3em; font: 700 3rem/1 'Lexend', system-ui, sans-serif; color: var(--coral); pointer-events: none; z-index: 5; }
+@media (prefers-reduced-motion: reduce) { .zzz, .excl { display: none; } }
+
+/* indexsparkmo: la nube y las caritas son del DOM; mo.js las anima (aparecen desde opacidad 0) */
+body.mo .u { animation: none; opacity: 0; transition: scale .35s var(--ease); }
+body.mo .u.f { animation: flotar var(--fd) ease-in-out var(--fdl) infinite alternate; }
+.sin-mo body.mo .u, .sin-mo body.mo .carita { opacity: 1; }
+body.mo .egg-msg { animation: egg-in .4s var(--ease) both, egg-out .4s ease 2.8s forwards; }
+.carita { position: absolute; z-index: 4; width: var(--s); aspect-ratio: 1; margin: calc(var(--s) / -2) 0 0 calc(var(--s) / -2); border-radius: 50%; background: var(--c); pointer-events: none; transition: scale .25s var(--ease); }
+.carita.cerca { scale: 1.12; }
+.carita .rasgos { position: absolute; inset: 0; translate: var(--ox, 0%) var(--oy, 0%); transition: translate .18s ease-out; }
+.carita .ojo { position: absolute; top: 33%; width: 11%; aspect-ratio: 1; border-radius: 50%; background: var(--ink); }
+.carita .ojo:nth-child(1) { left: 29%; }
+.carita .ojo:nth-child(2) { left: 60%; }
+.carita .boca { position: absolute; transition: transform .25s var(--ease); transform-origin: 50% 0; }
+.carita.cerca .boca { transform: scale(1.28); }
+.carita.boca-0 .boca { left: 33%; top: 52%; width: 34%; height: 17%; border-bottom: max(3px, calc(var(--s) * .07)) solid var(--ink); border-radius: 0 0 100% 100%; }
+.carita.boca-1 .boca { left: 36%; top: 66%; width: 28%; border-top: max(3px, calc(var(--s) * .07)) solid var(--ink); border-radius: 99px; }
+.carita.boca-2 .boca { left: 34%; top: 56%; width: 32%; height: 17%; background: var(--ink); border-radius: 0 0 100% 100%; }
+.carita.boca-3 .boca { left: 42%; top: 58%; width: 16%; aspect-ratio: 1; border: max(3px, calc(var(--s) * .07)) solid var(--ink); border-radius: 50%; }
+
+/* indexsparkmo: formas geométricas en la nube (las figuras no llevan carita, salvo círculos y cuadrados redondeados).
+   Ninguna tiene esquinas vivas: los triángulos, rombos y medios círculos se recortan con una máscara de puntas redondeadas. */
+body.mo .u.cuad { border-radius: 24%; }
+body.mo .u:is(.tri, .rombo, .semi, .flor) { border-radius: 0; -webkit-mask: var(--m) center / 100% 100% no-repeat; mask: var(--m) center / 100% 100% no-repeat; }
+body.mo .u.tri { --m: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,16 87,82 13,82' stroke='black' stroke-width='16' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+body.mo .u.rombo { --m: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,12 88,50 50,88 12,50' stroke='black' stroke-width='14' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+body.mo .u.semi { --m: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M10 50 A40 40 0 0 1 90 50 Z' stroke='black' stroke-width='10' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+body.mo .u.flor { --m: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50.0' cy='23.0' r='23'/%3E%3Ccircle cx='73.4' cy='36.5' r='23'/%3E%3Ccircle cx='73.4' cy='63.5' r='23'/%3E%3Ccircle cx='50.0' cy='77.0' r='23'/%3E%3Ccircle cx='26.6' cy='63.5' r='23'/%3E%3Ccircle cx='26.6' cy='36.5' r='23'/%3E%3Ccircle cx='50' cy='50' r='20'/%3E%3C/svg%3E"); }
+body.mo .u.anillo { background: radial-gradient(circle at center, transparent 0 44%, color-mix(in srgb, var(--c) 90%, transparent) 45%); }
+body.mo .u:is(.tri, .rombo, .semi, .flor, .cuad) { transition: scale .35s var(--ease), rotate .5s var(--ease); }
+body.mo .u:is(.tri, .rombo, .semi, .flor, .cuad) { rotate: var(--r0, 0deg); }
+body.mo .u:is(.tri, .rombo, .semi, .flor, .cuad):hover { rotate: calc(var(--r0, 0deg) + 25deg); }
