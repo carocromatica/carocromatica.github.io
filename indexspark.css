@@ -464,3 +464,14 @@ body.mo .u.anillo { background: radial-gradient(circle at center, transparent 0 
 body.mo .u:is(.tri, .rombo, .semi, .flor, .cuad) { transition: scale .35s var(--ease), rotate .5s var(--ease); }
 body.mo .u:is(.tri, .rombo, .semi, .flor, .cuad) { rotate: var(--r0, 0deg); }
 body.mo .u:is(.tri, .rombo, .semi, .flor, .cuad):hover { rotate: calc(var(--r0, 0deg) + 25deg); }
+
+/* ========== indexsparkthree-mo: three.js (nube 3D) + movimiento con CSS/Web Animations ========== */
+.fx { position: absolute; pointer-events: none; z-index: 3000; }
+.fx-pto { width: 12px; height: 12px; border-radius: 50%; }
+.fx-raya { width: 18px; height: 4px; border-radius: 4px; transform-origin: 0 50%; }
+.fx-onda { border: 14px solid #6CD0CD; border-radius: 50%; box-sizing: border-box; width: 240px; height: 240px; z-index: 0; }
+body.tm .carita.viva .rasgos { animation: carita-bob var(--sp) ease-in-out infinite alternate; }
+body.tm .carita.viva .ojo { animation: carita-parpadeo var(--bd) ease-in-out var(--bdl) infinite; }
+@keyframes carita-bob { to { transform: translateY(-3px); } }
+@keyframes carita-parpadeo { 0%, 94%, 100% { transform: scaleY(1); } 97% { transform: scaleY(.08); } }
+@media (prefers-reduced-motion: reduce) { body.tm .carita .rasgos, body.tm .carita .ojo { animation: none; } }
