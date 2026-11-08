@@ -471,3 +471,70 @@ body.bento .disenadora-hero::before { content: ''; position: absolute; left: 50%
 body.bento .disenadora-hero::before { transition: transform .75s cubic-bezier(.65, 0, .35, 1), opacity .2s ease .6s; }
 body.bento .disenadora-hero.sin-circulo::before { transform: translate(-50%, -50%) scale(0); opacity: 0; }
 @media (prefers-reduced-motion: reduce) { body.bento .disenadora-hero::before { transition: none; } }
+
+/* Sobre mí sobre un fondo gris con bordes ondulados (arriba y abajo), sin cortes rectos */
+#sobre-mi { isolation: isolate; padding-block: calc(clamp(2.5rem, 5vw, 4.5rem) + 3.4rem); }
+#sobre-mi::before {
+  content: ''; position: absolute; inset: 0; z-index: -1; background: #F2F4F5; pointer-events: none;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 56' preserveAspectRatio='none'%3E%3Cpath d='M0,34 C130,2 270,2 400,34 S670,66 800,34 L800,56 L0,56 Z' fill='black'/%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 56' preserveAspectRatio='none'%3E%3Cpath d='M0,22 C130,54 270,54 400,22 S670,-10 800,22 L800,0 L0,0 Z' fill='black'/%3E%3C/svg%3E"), linear-gradient(#000, #000);
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 56' preserveAspectRatio='none'%3E%3Cpath d='M0,34 C130,2 270,2 400,34 S670,66 800,34 L800,56 L0,56 Z' fill='black'/%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 56' preserveAspectRatio='none'%3E%3Cpath d='M0,22 C130,54 270,54 400,22 S670,-10 800,22 L800,0 L0,0 Z' fill='black'/%3E%3C/svg%3E"), linear-gradient(#000, #000);
+  -webkit-mask-size: 900px 56px, 900px 56px, 100% calc(100% - 100px);
+  mask-size: 900px 56px, 900px 56px, 100% calc(100% - 100px);
+  -webkit-mask-position: 0 0, 0 100%, 0 50px;
+  mask-position: 0 0, 0 100%, 0 50px;
+  -webkit-mask-repeat: repeat-x, repeat-x, no-repeat;
+  mask-repeat: repeat-x, repeat-x, no-repeat;
+}
+/* sobre el gris, las chapitas y las redes pasan a blanco para que no se pierdan */
+.bento-sobre.nuevo .c-redes a { background: #fff; }
+.bento-sobre.nuevo .c-redes a i { background: #EEF0F2; }
+body.bento .c-skills.banda i { background: #F2F4F5; }
+
+/* Borde superior festoneado, hecho de círculos como la nube (abajo sigue la onda suave) */
+#sobre-mi::before {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 64' preserveAspectRatio='none'%3E%3Cg fill='black'%3E%3Ccircle cx='50' cy='60' r='30'/%3E%3Ccircle cx='150' cy='60' r='38'/%3E%3Ccircle cx='250' cy='60' r='26'/%3E%3Ccircle cx='350' cy='60' r='34'/%3E%3Ccircle cx='450' cy='60' r='40'/%3E%3Ccircle cx='550' cy='60' r='28'/%3E%3Ccircle cx='650' cy='60' r='36'/%3E%3Ccircle cx='750' cy='60' r='30'/%3E%3Ccircle cx='850' cy='60' r='38'/%3E%3Crect x='0' y='58' width='900' height='6'/%3E%3C/g%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 56' preserveAspectRatio='none'%3E%3Cpath d='M0,22 C130,54 270,54 400,22 S670,-10 800,22 L800,0 L0,0 Z' fill='black'/%3E%3C/svg%3E"), linear-gradient(#000, #000);
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 64' preserveAspectRatio='none'%3E%3Cg fill='black'%3E%3Ccircle cx='50' cy='60' r='30'/%3E%3Ccircle cx='150' cy='60' r='38'/%3E%3Ccircle cx='250' cy='60' r='26'/%3E%3Ccircle cx='350' cy='60' r='34'/%3E%3Ccircle cx='450' cy='60' r='40'/%3E%3Ccircle cx='550' cy='60' r='28'/%3E%3Ccircle cx='650' cy='60' r='36'/%3E%3Ccircle cx='750' cy='60' r='30'/%3E%3Ccircle cx='850' cy='60' r='38'/%3E%3Crect x='0' y='58' width='900' height='6'/%3E%3C/g%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 56' preserveAspectRatio='none'%3E%3Cpath d='M0,22 C130,54 270,54 400,22 S670,-10 800,22 L800,0 L0,0 Z' fill='black'/%3E%3C/svg%3E"), linear-gradient(#000, #000);
+  -webkit-mask-size: 900px 64px, 900px 56px, 100% calc(100% - 110px);
+  mask-size: 900px 64px, 900px 56px, 100% calc(100% - 110px);
+  -webkit-mask-position: 0 0, 0 100%, 0 60px;
+  mask-position: 0 0, 0 100%, 0 60px;
+}
+#sobre-mi { padding-block: calc(clamp(2.5rem, 5vw, 4.5rem) + 3.8rem); }
+
+/* Isla gris suelta: un bloque de ancho contenido con esquinas orgánicas (cada una con su propio radio), rodeado de blanco */
+#sobre-mi { padding-block: calc(clamp(2.5rem, 5vw, 4.5rem) + 1.6rem); }
+#sobre-mi::before {
+  -webkit-mask: none; mask: none;
+  left: max(.75rem, calc(50% - 36rem)); right: max(.75rem, calc(50% - 36rem)); top: .6rem; bottom: .6rem; inset-inline: auto;
+  left: max(.75rem, calc(50% - 36rem)); right: max(.75rem, calc(50% - 36rem));
+  border-radius: 150px 70px 170px 90px / 110px 160px 80px 140px;
+}
+@media (max-width: 52rem) { #sobre-mi::before { border-radius: 70px 36px 80px 44px / 52px 76px 40px 64px; left: .5rem; right: .5rem; } }
+
+/* Mancha gris que se derrama por el costado izquierdo: contorno irregular, sin ninguna esquina recta */
+#sobre-mi::before {
+  left: -7vw; right: max(.5rem, calc(50% - 40rem)); top: .2rem; bottom: .2rem;
+  border-radius: 0;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 600' preserveAspectRatio='none'%3E%3Cpath d='M0,45 C120,8 260,60 420,34 S720,6 840,52 C930,88 975,170 962,262 C952,340 992,420 930,498 C880,560 780,588 640,566 S380,600 250,572 C140,548 60,590 0,556 Z' fill='black'/%3E%3C/svg%3E") center / 100% 100% no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 600' preserveAspectRatio='none'%3E%3Cpath d='M0,45 C120,8 260,60 420,34 S720,6 840,52 C930,88 975,170 962,262 C952,340 992,420 930,498 C880,560 780,588 640,566 S380,600 250,572 C140,548 60,590 0,556 Z' fill='black'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+}
+@media (max-width: 52rem) { #sobre-mi::before { left: -6vw; right: -2vw; } }
+
+/* La mancha gris ahora envuelve solo el título y el texto de presentación; las redes y los chips quedan sobre el blanco */
+#sobre-mi::before { display: none; }
+#sobre-mi { padding-block: clamp(2.5rem, 5vw, 4.5rem); }
+.bento-sobre.nuevo .c-lead { position: relative; isolation: isolate; overflow: visible; padding: clamp(1.4rem, 3vw, 2.4rem) clamp(1.6rem, 3vw, 2.6rem) clamp(1.4rem, 3vw, 2.4rem) 0; }
+.bento-sobre.nuevo .c-lead::before {
+  content: ''; position: absolute; z-index: -1; background: #F2F4F5; pointer-events: none;
+  left: calc(min(0px, 33rem - 50vw) - 5rem); right: 0; top: 0; bottom: 0;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 600' preserveAspectRatio='none'%3E%3Cpath d='M0,45 C120,8 260,60 420,34 S720,6 840,52 C930,88 975,170 962,262 C952,340 992,420 930,498 C880,560 780,588 640,566 S380,600 250,572 C140,548 60,590 0,556 Z' fill='black'/%3E%3C/svg%3E") center / 100% 100% no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 600' preserveAspectRatio='none'%3E%3Cpath d='M0,45 C120,8 260,60 420,34 S720,6 840,52 C930,88 975,170 962,262 C952,340 992,420 930,498 C880,560 780,588 640,566 S380,600 250,572 C140,548 60,590 0,556 Z' fill='black'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+}
+.bento-sobre.nuevo .c-lead .b-simple { margin-top: 0; }
+.bento-sobre.nuevo .c-redes { margin-top: clamp(1.4rem, 3vw, 2.4rem); }
+@media (max-width: 52rem) { .bento-sobre.nuevo .c-lead { padding-right: 1.2rem; } .bento-sobre.nuevo .c-redes { margin-top: 0; } }
+body.bento.limpio .bento-sobre.nuevo .c-lead { padding: clamp(1.8rem, 3.4vw, 2.8rem) clamp(1.6rem, 3vw, 2.6rem) clamp(1.8rem, 3.4vw, 2.8rem) 0; overflow: visible; }
+@media (max-width: 52rem) { body.bento.limpio .bento-sobre.nuevo .c-lead { padding-right: 1.2rem; } }
+
+/* Opción 5: el título y el texto van encerrados en un cuadrado gris (rectángulo con esquinas suaves), alineado con el resto del contenido */
+body.bento.limpio .bento-sobre.nuevo .c-lead { padding: clamp(1.5rem, 3vw, 2.4rem); }
+.bento-sobre.nuevo .c-lead::before { left: 0; right: 0; top: 0; bottom: 0; border-radius: 1.4rem; -webkit-mask: none; mask: none; }
+@media (max-width: 52rem) { body.bento.limpio .bento-sobre.nuevo .c-lead { padding: 1.3rem; } }
