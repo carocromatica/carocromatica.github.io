@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[bento] Carolina Torres (Carocromatica) — Product Designer y Front-End Developer</title>
+  <meta name="description" content="Carolina Torres (Carocromatica), Product Designer y Front-End Developer. Construyo experiencias digitales pensando en las personas.">
+  <link rel="icon" href="./svg/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;700&family=Atkinson+Hyperlegible+Next:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" href="indexspark.css">
+  <link rel="stylesheet" href="indexspark-bento.css">
+</head>
+<body class="v2 v3 mo tm bento lineas limpio cargando dormida">
+  <div class="cargador" role="status" aria-label="Cargando"><span></span></div>
+  <header class="nav">
+    <nav class="wrap" aria-label="Principal">
+      <a class="nav-logo" href="#top" aria-label="Carocromatica, inicio"><img src="spark/marca.svg" alt="" width="52" height="52"></a>
+      <ul>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-t">
+      <div class="nube-wrap">
+          <p class="sr-only">Ilustración: una nube de pensamiento formada por círculos de colores, cada uno es un usuario, que sale de la cabeza de la diseñadora.</p>
+          <canvas id="nubeCanvas" class="nube-canvas" aria-hidden="true"></canvas>
+          <figure class="disenadora disenadora-hero" id="disenadora" title="Despierta a Caro" role="button" tabindex="0" aria-label="Despierta a Caro">
+          <img src="spark/caro-despertando-frames/svg/caro-01.svg" alt="Ilustración de Carolina Torres pensando en sus usuarios" width="1173" height="1347">
+          <span class="despierta-msg" aria-hidden="true">Despierta a Caro</span>
+        </figure>
+        
+        </div>
+
+      <div class="wrap hero-grid">
+        <div class="hero-texto">
+          <p class="saludo">Hola, soy <span class="hl">Caro</span>.</p>
+          <h1 id="hero-t">Product Designer y Front-End Developer.</h1>
+          <p class="hero-sub">Construyo experiencias digitales pensando en las personas.</p>
+          <div class="cta">
+            <a class="btn" href="#proyectos">Ver proyectos <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            <a class="btn ghost" href="./cv/Carolina%20torres%20cv%202018.pdf">Descargar CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="b-sec" id="sobre-mi" aria-labelledby="sobre-t">
+      <div class="wrap">
+        <h2 class="b-simple" id="sobre-t">Sobre <span class="hl">mí</span></h2>
+        <div class="bento bento-sobre nuevo">
+          <div class="cel c-lead">
+            <p class="lead">Soy Carolina Torres Durán, diseñadora de productos digitales en Chile. <strong>Me gusta entender cómo trabaja la gente de verdad</strong>.</p>
+            <p>Entre planillas, atajos y tareas manuales encuentro pistas para diseñar. Combino investigación, diseño de servicios y front-end. <strong>A veces una buena solución empieza por ordenar quién hace qué</strong>. Otras, por probar una idea en código. Mi parte favorita es verla llegar a producción y hacerle el día más fácil a alguien.</p>
+          </div>
+          <ul class="cel c-redes" aria-label="Mis redes">
+            <li><a href="https://www.instagram.com/carocromatica/" target="_blank" rel="noopener"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a></li>
+            <li><a href="https://github.com/carocromatica" target="_blank" rel="noopener"><i class="fab fa-github-alt" aria-hidden="true"></i><span>GitHub</span></a></li>
+            <li><a href="https://www.behance.net/carocromatica" target="_blank" rel="noopener"><i class="fab fa-behance" aria-hidden="true"></i><span>Behance</span></a></li>
+            <li><a href="https://www.linkedin.com/in/carocromatica/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn</span></a></li>
+          </ul>
+          <ul class="c-skills banda" aria-label="Especialidades">
+            <li class="cel teal"><img src="svg/investigacion-ux.svg" alt="" width="48" height="48"><span>Investigación UX</span></li>
+            <li class="cel amber"><img src="svg/diseno-de-servicios.svg" alt="" width="48" height="48"><span>Diseño de servicios</span></li>
+            <li class="cel coral"><img src="svg/diseno-ux-ui.svg" alt="" width="48" height="48"><span>Diseño UX/UI</span></li>
+            <li class="cel coral-l"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i><span>Docencia</span></li>
+            <li class="cel teal-l"><img src="svg/desarrollo-front-end.svg" alt="" width="48" height="48"><span>Desarrollo front-end</span></li>
+            <li class="cel amber-l"><i class="fas fa-sitemap" aria-hidden="true"></i><span>Design Ops</span></li>
+            <li class="cel amber"><i class="fas fa-palette" aria-hidden="true"></i><span>Design systems</span></li>
+            <li class="cel coral-l"><i class="fas fa-gamepad" aria-hidden="true"></i><span>Gamificación</span></li>
+            <li class="cel teal"><i class="fas fa-sync-alt" aria-hidden="true"></i><span>Metodologías ágiles</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="b-sec" id="skills" aria-labelledby="skills-t">
+      <div class="wrap">
+        <h2 class="b-titulo der" id="skills-t"><span class="t-n" aria-hidden="true">02</span><span class="t-xl">Tech</span><span class="t-sm">skills</span></h2>
+        <ul class="bento bento-skills">
+          <li class="cel s-js amber"><img src="./svg/js.png" alt="" width="42" height="42"><span>JavaScript</span></li>
+          <li class="cel s-html coral-l"><img src="./svg/html.png" alt="" width="42" height="42"><span>HTML5</span></li>
+          <li class="cel s-css teal-l"><img src="./svg/css.png" alt="" width="42" height="42"><span>CSS3</span></li>
+          <li class="cel s-react ink"><img src="./svg/react.png" alt="" width="42" height="42"><span>React.js</span></li>
+          <li class="cel s-fire amber-l"><img src="./svg/firebase.png" alt="" width="42" height="42"><span>Firebase</span></li>
+          <li class="cel s-mat teal"><img src="./svg/materialize.png" alt="" width="42" height="42"><span>Materialize</span></li>
+          <li class="cel s-boot coral"><img src="./svg/bootstrap.png" alt="" width="42" height="42"><span>Bootstrap</span></li>
+          <li class="cel s-git amber-l"><img src="./svg/git.png" alt="" width="42" height="42"><span>Git</span></li>
+          <li class="cel s-gh teal-l"><img src="./svg/github.png" alt="" width="42" height="42"><span>GitHub</span></li>
+          <li class="cel s-ps coral-l"><img src="./svg/photoshop.png" alt="" width="42" height="42"><span>Photoshop</span></li>
+          <li class="cel s-ai amber"><img src="./svg/illustrator.png" alt="" width="42" height="42"><span>Illustrator</span></li>
+          <li class="cel s-xd teal"><img src="./svg/xd.png" alt="" width="42" height="42"><span>Adobe XD</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="b-sec" id="proyectos" aria-labelledby="proy-t">
+      <div class="wrap">
+        <h2 class="b-titulo" id="proy-t"><span class="t-n" aria-hidden="true">03</span><span class="t-sm">Proyectos</span><span class="t-xl">reales</span></h2>
+        <div class="bento bento-proy">
+          <article class="proy p1 coral">
+            <span class="num" aria-hidden="true">01</span>
+            <div class="proy-art"><img src="./svg/ecogo.png" alt="Pantallas de la app EcoGO!" width="800" height="622" loading="lazy"></div>
+            <div class="proy-txt">
+              <h3>EcoGO!</h3>
+              <p>EcoGO! fue el proyecto ganador de la Hackaton "Open House Laboratoria". Es una propuesta que busca incentivar el reciclaje a través de la gamificación y utilizando las API de geolocalización de HERE. Desarrollado totalmente con JavaScript, el proyecto además utiliza validación con QR, autentificación y almacenamiento de datos en Firebase y conexión a Facebook.</p>
+              <ul class="tags" aria-label="Tecnologías"><li>JavaScript</li><li>Firebase</li><li>API HERE</li><li>QR</li></ul>
+              <div class="cta">
+                <a class="btn" href="https://carocromatica.github.io/Proyecto-Here/" target="_blank" rel="noopener"><i class="fas fa-play-circle" aria-hidden="true"></i> Ver demo</a>
+                <a class="btn ghost" href="https://github.com/carocromatica/Proyecto-Here" target="_blank" rel="noopener"><i class="fas fa-code" aria-hidden="true"></i> Código</a>
+              </div>
+            </div>
+          </article>
+          <article class="proy p2 teal">
+            <span class="num" aria-hidden="true">02</span>
+            <div class="proy-art"><img src="./svg/synapp.png" alt="Pantallas de Synapse Social Network" width="800" height="622" loading="lazy"></div>
+            <div class="proy-txt">
+              <h3>Synapse Social Network</h3>
+              <p>Synapse es una red social enfocada al aprendizaje. Es mi primer proyecto desarrollado con React, cuenta con autentificación con Firebase y Google.</p>
+              <ul class="tags" aria-label="Tecnologías"><li>React</li><li>Firebase</li><li>Google Auth</li></ul>
+              <div class="cta">
+                <a class="btn" href="https://carocromatica.github.io/synapp/" target="_blank" rel="noopener"><i class="fas fa-play-circle" aria-hidden="true"></i> Ver demo</a>
+                <a class="btn ghost" href="https://github.com/carocromatica/synapp" target="_blank" rel="noopener"><i class="fas fa-code" aria-hidden="true"></i> Código</a>
+              </div>
+            </div>
+          </article>
+          <article class="proy p3 amber">
+            <span class="num" aria-hidden="true">03</span>
+            <div class="proy-art"><img src="./svg/translab.png" alt="Pantallas de la app Translab" width="800" height="622" loading="lazy"></div>
+            <div class="proy-txt">
+              <h3>Translab</h3>
+              <p>Translab es un pequeño, pero práctico proyecto que simula una APP. Su objetivo es almacenar y calcular las cargas de las tarjetas Bip! Utiliza Firebase, consumo de API y está desarrollado totalmente con JavaScript.</p>
+              <ul class="tags" aria-label="Tecnologías"><li>JavaScript</li><li>Firebase</li><li>API</li></ul>
+              <div class="cta">
+                <a class="btn" href="https://carocromatica.github.io/TranslabFirebase/src/" target="_blank" rel="noopener"><i class="fas fa-play-circle" aria-hidden="true"></i> Ver demo</a>
+                <a class="btn ghost" href="https://github.com/carocromatica/TranslabFirebase" target="_blank" rel="noopener"><i class="fas fa-code" aria-hidden="true"></i> Código</a>
+              </div>
+            </div>
+          </article>
+          <article class="proy p4 ink">
+            <span class="num" aria-hidden="true">04</span>
+            <div class="proy-art"><img src="./svg/pinterest.png" alt="Réplica de Pinterest en varios dispositivos" width="1000" height="732" loading="lazy"></div>
+            <div class="proy-txt">
+              <h3>Pinterest Replica</h3>
+              <p>Réplica de Pinterest realizada con React. Utiliza consumo de API, además de su propio buscador para cargar las imágenes. Diseño responsivo realizado solo con CSS.</p>
+              <ul class="tags" aria-label="Tecnologías"><li>React</li><li>API</li><li>CSS</li></ul>
+              <div class="cta">
+                <a class="btn" href="https://carocromatica.github.io/svalley/" target="_blank" rel="noopener"><i class="fas fa-play-circle" aria-hidden="true"></i> Ver demo</a>
+                <a class="btn ghost" href="https://github.com/carocromatica/svalley" target="_blank" rel="noopener"><i class="fas fa-code" aria-hidden="true"></i> Código</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="b-contacto" id="contacto">
+    <div class="wrap">
+      <p class="eyebrow">04 · Contacto</p>
+      <h2 class="b-hablamos">¿Hablamos<span class="signo">?</span></h2>
+      <a class="correo" href="mailto:ca.torresduran@gmail.com">ca.torresduran@gmail.com</a>
+      <ul class="contacto-lista">
+        <li><a href="https://github.com/carocromatica" target="_blank" rel="noopener"><i class="fab fa-github-alt" aria-hidden="true"></i> GitHub</a></li>
+        <li><a href="https://www.behance.net/carocromatica" target="_blank" rel="noopener"><i class="fab fa-behance" aria-hidden="true"></i> Behance</a></li>
+        <li><a href="https://www.linkedin.com/in/carocromatica/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a></li>
+        <li><a href="./cv/Carolina%20torres%20cv%202018.pdf"><i class="far fa-file-alt" aria-hidden="true"></i> Curriculum</a></li>
+        <li><a href="https://app.talento.laboratoria.la/profile/8ibsIIPkJ1aaruHDT4MYyW7eWAL2" target="_blank" rel="noopener"><i class="fas fa-code" aria-hidden="true"></i> Talento Laboratoria</a></li>
+      </ul>
+      <p class="pie">© Carolina Torres · Carocromatica</p>
+    </div>
+  </footer>
+
+  <script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js" } }</script>
+  <script type="module">
+import * as THREE from 'three';
+
+// ───────── indexsparkthree-mo: three.js (3D de la nube) + el movimiento que armamos con mo.js, hecho con CSS/Web Animations ─────────
+// Una sola librería: three.js. Los rebotes elásticos, el estallido, las Z y las caritas salen de la API nativa del navegador.
+const REDUCIDO = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const MOVIL = () => matchMedia('(max-width: 52rem)').matches;
+const R = (a, b) => a + Math.random() * (b - a);
+const COLORES = ['#FFB700', '#FF495C', '#6CD0CD', '#D1263E'];
+const wrap = document.querySelector('.nube-wrap');
+const canvas = document.getElementById('nubeCanvas');
+const fig = document.getElementById('disenadora');
+const img = fig.querySelector('img');
+
+// ───────── Movimiento nativo: curvas tipo mo.js (elástico, rebote) con Web Animations ─────────
+const elastico = t => t >= 1 ? 1 : 1 - Math.exp(-6 * t) * Math.cos(11 * t);
+const rebote = t => { const n = 7.5625, d = 2.75; if (t < 1 / d) return n * t * t; if (t < 2 / d) return n * (t -= 1.5 / d) * t + .75; if (t < 2.5 / d) return n * (t -= 2.25 / d) * t + .9375; return n * (t -= 2.625 / d) * t + .984375; };
+const suave = t => 1 - (1 - t) * (1 - t);
+// anima(el, { x:[de,a], y:[…], scale:[…], rotate:[…], opacity:[…] }, ms, retraso, curva): muestrea la curva en fotogramas para WAAPI
+function anima(el, p, ms, retraso = 0, curva = elastico, fin) {
+  const N = 36, frames = [], v = (k, t) => p[k] ? p[k][0] + (p[k][1] - p[k][0]) * t : (k === 'scale' ? 1 : 0);
+  for (let i = 0; i <= N; i++) {
+    const t = i / N, c = curva(t);
+    const f = { transform: `translate(${v('x', c)}px, ${v('y', c)}px) rotate(${v('rotate', c)}deg) scale(${v('scale', c)})` };
+    if (p.opacity) f.opacity = p.opacity[0] + (p.opacity[1] - p.opacity[0]) * suave(t);
+    frames.push(f);
+  }
+  const a = el.animate(frames, { duration: ms, delay: retraso, fill: 'backwards' });   // 'backwards': antes de empezar queda en el primer cuadro
+  a.onfinish = () => { if (p.opacity) el.style.opacity = p.opacity[1]; if (fin) fin(); };
+  return a;
+}
+
+// ───────── Caro: 17 cuadros (1-10 duerme en bucle, 11-17 despierta) ─────────
+const FR = n => 'spark/caro-despertando-frames/svg/caro-' + String(n).padStart(2, '0') + '.svg';
+const DUR = [0, 460, 460, 460, 460, 460, 220, 480, 860, 120, 440, 650, 160, 170, 140, 170, 150, 1320];
+let despierta = false, timerGuion, timerSorpresa, timerZ;
+for (let n = 1; n <= 17; n++) new Image().src = FR(n);
+if (REDUCIDO) img.src = FR(1);
+function cabecear() {
+  let n = 1;
+  const paso = () => { if (despierta) return; img.src = FR(n); timerGuion = setTimeout(paso, DUR[n]); n = n % 10 + 1; };
+  paso();
+}
+function despertar(alLlegar) {
+  let n = 11;
+  const paso = () => { img.src = FR(n); if (n < 17) { timerSorpresa = setTimeout(paso, DUR[n]); n++; } else if (alLlegar) alLlegar(); };
+  paso();
+}
+function zzz() {
+  if (despierta || REDUCIDO) return;
+  const z = document.createElement('span');
+  z.className = 'zzz'; z.setAttribute('aria-hidden', 'true'); z.textContent = Math.random() < .5 ? 'z' : 'Z';
+  fig.appendChild(z);
+  const a = z.animate([
+    { transform: 'translate(0,0) scale(.5)', opacity: 1 }, { transform: 'translate(26px,-40px) scale(.9)', opacity: .9, offset: .3 },
+    { transform: 'translate(2px,-80px) scale(1.2)', opacity: .5, offset: .65 }, { transform: 'translate(34px,-110px) scale(1.5)', opacity: 0 }
+  ], { duration: 3200, easing: 'ease-out' });
+  a.onfinish = () => z.remove();
+  timerZ = setTimeout(zzz, 1100);
+}
+const TEXTOS = ['.hero-texto', '.nav ul', '.nav-logo'];
+const mostrarTodo = () => TEXTOS.forEach(s => { const e = document.querySelector(s); if (e) e.style.opacity = 1; });
+const entra = (el, desde, retraso) => { const e = typeof el === 'string' ? document.querySelector(el) : el; if (e) anima(e, { x: [desde, 0], opacity: [0, 1] }, 1300, retraso || 0); };
+
+addEventListener('intro', () => {
+  if (REDUCIDO) { fig.style.opacity = 1; return; }
+  entra(fig, -170);
+  cabecear(); zzz();
+}, { once: true });
+if (REDUCIDO) mostrarTodo();
+
+// Estallido al despertarla: formas que salen disparadas y un signo de exclamación
+function sorpresa(primera) {
+  if (REDUCIDO) return;
+  const x = fig.offsetLeft + fig.offsetWidth * .5, y = fig.offsetTop + fig.offsetHeight * .22;
+  const fx = (cls, css, frames, opts) => { const e = document.createElement('i'); e.className = 'fx ' + cls; e.style.cssText = 'left:' + x + 'px;top:' + y + 'px;' + css; wrap.appendChild(e); const a = e.animate(frames, opts); a.onfinish = () => e.remove(); return e; };
+  for (let k = 0; k < 14; k++) {
+    const ang = k / 14 * 6.2831853 + R(-.2, .2), d = R(90, 150);
+    fx('fx-pto', 'background:' + COLORES[k % 4] + ';', [
+      { transform: 'translate(-50%,-50%) translate(0,0) scale(1)', opacity: 1 },
+      { transform: `translate(-50%,-50%) translate(${Math.cos(ang) * d}px,${Math.sin(ang) * d}px) scale(0)`, opacity: .9 }
+    ], { duration: R(900, 1250), easing: 'cubic-bezier(.22,1,.36,1)', delay: k * 12 });
+  }
+  for (let k = 0; k < 10; k++) {
+    const ang = k / 10 * 6.2831853 + .3, d = 110;
+    fx('fx-raya', 'background:' + ['#1E252B', '#FFB700', '#FF495C'][k % 3] + ';', [
+      { transform: `translate(-50%,-50%) rotate(${ang}rad) translate(26px,0) scaleX(1)`, opacity: 1 },
+      { transform: `translate(-50%,-50%) rotate(${ang}rad) translate(${d}px,0) scaleX(.1)`, opacity: 0 }
+    ], { duration: 900, easing: 'ease-out' });
+  }
+  anima(fig, { y: [-34, 0] }, 1000, 0, rebote);
+  if (primera) {
+    const ex = document.createElement('span');
+    ex.className = 'excl'; ex.setAttribute('aria-hidden', 'true'); ex.textContent = '!';
+    fig.appendChild(ex);
+    const a = ex.animate([
+      { transform: 'scale(0) translateY(0)', opacity: 1 }, { transform: 'scale(1.15) translateY(-10px)', opacity: 1, offset: .35 },
+      { transform: 'scale(1) translateY(-16px)', opacity: 1, offset: .6 }, { transform: 'scale(1) translateY(-16px)', opacity: 0 }
+    ], { duration: 1500, easing: 'ease-out' });
+    a.onfinish = () => ex.remove();
+  }
+}
+
+// ───────── La nube de pensamiento en WebGL (three.js) ─────────
+// Cada figura es una instancia de un mesh; la forma, la carita, la trama y las animaciones se dibujan en el shader.
+let revelada = false, generar = () => {};
+let cloud = null;
+if (canvas) {
+  const PALETA = { teal: [108, 208, 205], amber: [255, 183, 0], coral: [255, 73, 92], 'coral-d': [209, 38, 62], 'teal-l': [182, 232, 230], 'amber-l': [255, 219, 122], 'coral-l': [255, 164, 174] };
+  const PESOS = [['teal', 18], ['amber', 18], ['coral', 17], ['coral-d', 8], ['teal-l', 9], ['amber-l', 8], ['coral-l', 6]];
+  const elegirColor = () => { let v = Math.random() * PESOS.reduce((a, c) => a + c[1], 0); for (const [n, w] of PESOS) { v -= w; if (v <= 0) return n; } return 'teal'; };
+  // Formas: 0 círculo, 1 cuadrado redondeado, 2 triángulo, 3 rombo, 4 medio círculo, 5 flor, 6 anillo (todas con las puntas redondeadas)
+  const FORMAS = [[0, 52], [1, 14], [2, 10], [3, 8], [4, 6], [5, 5], [6, 5]];
+  const elegirForma = () => { let v = Math.random() * FORMAS.reduce((a, c) => a + c[1], 0); for (const [n, w] of FORMAS) { v -= w; if (v <= 0) return n; } return 0; };
+  const MENSAJES = ['¡Me encontraste! Soy un usuario secreto.', 'Shhh… ¿ya viste los proyectos más abajo?', 'Tres de tres. Gracias por mirar con tanta atención.'];
+  const TOTAL = 1.5;                                  // segundos que tarda en aparecer toda la nube, figura por figura
+
+  function interp(pts, y) {
+    if (y <= pts[0][0]) return pts[0][1];
+    for (let i = 1; i < pts.length; i++) if (y <= pts[i][0]) { const t = (y - pts[i - 1][0]) / (pts[i][0] - pts[i - 1][0]); return pts[i - 1][1] + (pts[i][1] - pts[i - 1][1]) * t; }
+    return pts[pts.length - 1][1];
+  }
+
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, alpha: false, powerPreference: 'low-power' });
+  renderer.outputColorSpace = THREE.LinearSRGBColorSpace;
+  renderer.setClearColor(0xffffff, 1);
+  const scene = new THREE.Scene();
+  const camera = new THREE.OrthographicCamera(0, 1, 0, 1, -1, 1);   // unidades = píxeles, y hacia abajo
+
+  const VERT = /* glsl */`
+    attribute vec2 iPos; attribute float iR; attribute vec3 iColor; attribute float iZ;
+    attribute vec4 iFace;   // x tipo de carita (0 ninguna), y trama (1 puntos), z mirada, w rotación de la carita
+    attribute vec4 iAnim;   // x retardo, y periodo de flote (0 = quieto), z fase, w huevo (0 no, 1 sí, 2 descubierto)
+    attribute vec2 iOff; attribute float iHover; attribute float iColId;
+    attribute vec3 iShape;  // x forma, y ángulo inicial, z velocidad de giro (rad/s; 0 = no gira)
+    attribute float iId;
+    uniform float uTime; uniform float uMotion; uniform vec2 uTilt; uniform vec2 uCenter; uniform float uF; uniform vec2 uJump;
+    varying vec2 vUv; varying vec3 vColor; varying vec4 vFace; varying float vE; varying float vR; varying float vEgg; varying float vColId; varying vec2 vCenter; varying float vShape; varying float vAng;
+    void main() {
+      // Entrada: cada figura llega volando desde la cámara y se asienta con un resorte (las que giran, entran girando)
+      float t = uMotion > .5 ? clamp((uTime - iAnim.x) / 1.1, 0., 1.) : 1.;
+      float e = t >= 1. ? 1. : 1. - exp(-6. * t) * cos(11. * t);
+      float zRest = (iZ - .5) * 170.;
+      float z = zRest + (1. - e) * 1000.;
+      vec2 p = iPos + iOff * iR * (1. - e);
+      if (iAnim.y > 0. && uMotion > .5 && t >= 1.) p.y -= .05 * 2. * iR * (.5 + .5 * sin(6.2831853 * (uTime / iAnim.y) + iAnim.z));
+      // saltito de una figura al azar
+      float jt = uTime - uJump.y;
+      float jmp = (abs(iId - uJump.x) < .5 && jt > 0. && jt < .9) ? sin(3.14159 * jt / .9) : 0.;
+      p.y -= 9. * jmp;
+      // Rotación 3D suave de toda la nube según el cursor + perspectiva
+      vec3 q = vec3(p - uCenter, z);
+      float cy = cos(uTilt.y), sy = sin(uTilt.y), cx = cos(uTilt.x), sx = sin(uTilt.x);
+      float x1 = q.x * cy + q.z * sy; float z1 = -q.x * sy + q.z * cy;
+      float y2 = q.y * cx - z1 * sx;  float z2 = q.y * sx + z1 * cx;
+      float k = (uF / (uF - z2)) / (uF / (uF - zRest));
+      vec2 sp = uCenter + vec2(x1, y2) * k;
+      float s = iR * k * (1. + .14 * iHover + .35 * jmp);
+      float spin = abs(iShape.z) > 0. && uMotion > .5 ? iShape.z * max(0., uTime - iAnim.x - 1.2) - (1. - e) * 3.5 : 0.;
+      vAng = iShape.y + spin; vShape = iShape.x;
+      vUv = position.xy; vColor = iColor; vFace = iFace; vE = clamp(t * 3., 0., 1.); vR = max(s, 1.); vEgg = iAnim.w; vColId = iColId; vCenter = sp;
+      gl_Position = projectionMatrix * viewMatrix * vec4(sp + position.xy * s, 0., 1.);
+    }`;
+
+  const FRAG = /* glsl */`
+    varying vec2 vUv; varying vec3 vColor; varying vec4 vFace; varying float vE; varying float vR; varying float vEgg; varying float vColId; varying vec2 vCenter; varying float vShape; varying float vAng;
+    uniform float uTime; uniform vec2 uPtr; uniform float uPtrOn; uniform float uDpr;
+    float cov(float d, float aa) { return 1. - smoothstep(-aa, aa, d); }
+    float sdSeg(vec2 p, vec2 a, vec2 b) { vec2 pa = p - a, ba = b - a; float h = clamp(dot(pa, ba) / dot(ba, ba), 0., 1.); return length(pa - ba * h); }
+    float sdRoundBox(vec2 p, vec2 b, float r) { vec2 q = abs(p) - b + r; return length(max(q, 0.)) + min(max(q.x, q.y), 0.) - r; }
+    float sdTri(vec2 p, float r) { const float k = 1.7320508; p.x = abs(p.x) - r; p.y = p.y + r / k; if (p.x + k * p.y > 0.) p = vec2(p.x - k * p.y, -k * p.x - p.y) / 2.; p.x -= clamp(p.x, -2. * r, 0.); return -length(p) * sign(p.y); }
+    // distancia con signo de cada forma (radio 1); todas con las esquinas redondeadas
+    float forma(vec2 p, float f) {
+      if (f < .5) return length(p) - 1.;
+      if (f < 1.5) return sdRoundBox(p, vec2(.92), .42);
+      if (f < 2.5) { vec2 q = vec2(p.x, -p.y + .06) * .95; return (sdTri(q, .62) - .15) / .95; }
+      if (f < 3.5) { float c = .70710678; vec2 q = vec2(c * (p.x - p.y), c * (p.x + p.y)); return sdRoundBox(q, vec2(.56), .24); }
+      if (f < 4.5) { vec2 q = vec2(p.x, p.y - .46); return max(length(q) - .82, q.y + .1) - .13; }
+      if (f < 5.5) { float sec = 1.0471976; float a = mod(atan(p.y, p.x), sec) - sec * .5; vec2 q = length(p) * vec2(cos(a), sin(a)); return min(length(q - vec2(.58, 0.)) - .38, length(p) - .42); }
+      return abs(length(p) - .72) - .28;
+    }
+    void main() {
+      float aa = .75 / (vR * uDpr);                      // borde de ~1,5 px reales (antes eran ~5 en pantallas retina: se veía difuso)
+      float ca = cos(vAng), sa = sin(vAng);
+      vec2 ps = mat2(ca, sa, -sa, ca) * vUv;               // la forma gira; la carita (si la hay) no
+      float d = forma(ps, vShape);
+      float edge = cov(d, aa);
+      if (edge <= 0.) discard;
+      vec3 col = vColor;
+      vec3 ink = vec3(30., 37., 43.) / 255.;
+      if (vFace.y > .5) {
+        vec2 g = fract(ps * 3.4 + 7.) - .5;
+        col = mix(col, ink, .42 * (1. - smoothstep(.10, .14, length(g))));
+      }
+      float ft = vFace.x;
+      if (ft > .5) {
+        float a = vFace.w; float c = cos(a), s = sin(a);
+        mat2 rm = mat2(c, -s, s, c); vec2 p = rm * vUv;
+        vec2 look = uPtrOn > .5 ? uPtr - vCenter : vec2(0.);
+        float dl = length(look); look = dl > 1. ? look / dl * min(1., dl / 260.) : vec2(0.);
+        vec2 lk = rm * look; vec2 pm = p - lk * .06;
+        vec3 fc = vColId > 2.5 && vColId < 3.5 ? vec3(1., .72, 0.) : ink;
+        float on = vEgg > 1.5 ? 1. : 0.;
+        float blink = 1.;
+        if (vEgg > .5 && vEgg < 1.5) { float ph = fract(uTime / 6. + vFace.z * .07); blink = 1. - .92 * smoothstep(.92, .94, ph) * (1. - smoothstep(.96, .98, ph)); }
+        float er = mix(.105, .19, on);
+        float ex = .34 + vFace.z * .02;
+        vec2 e1 = p - (vec2(-ex, -.16) + lk * .11), e2 = p - (vec2(ex, -.16) + lk * .11);
+        float de = min(length(vec2(e1.x, e1.y / blink)), length(vec2(e2.x, e2.y / blink))) - er;
+        float m = cov(de, aa);
+        if (on > .5) fc = vec3(209., 38., 62.) / 255.;
+        float mt = ft; if (on > .5) mt = 4.;
+        float dm = 1.;
+        if (mt < 1.5) { vec2 q = vec2(pm.x / .34, (pm.y - .04) / .32); dm = max((abs(length(q) - 1.) - .2) * .33, -(pm.y - .04)); }
+        else if (mt < 2.5) { dm = sdSeg(pm, vec2(-.25, .24), vec2(.25, .24)) - .035; }
+        else if (mt < 3.5) { dm = abs(length(pm - vec2(0., .22)) - .14) - .035; }
+        else { vec2 q = vec2(pm.x / .28, (pm.y - .08) / .30); dm = max((length(q) - 1.) * .28, -(pm.y - .08)); }
+        m = max(m, cov(dm, aa));
+        col = mix(col, fc, m);
+      }
+      float k = .9 * edge * vE;
+      gl_FragColor = vec4(mix(vec3(1.), col, k), 1.);
+    }`;
+
+  const material = new THREE.ShaderMaterial({
+    vertexShader: VERT, fragmentShader: FRAG,
+    uniforms: { uTime: { value: 0 }, uMotion: { value: REDUCIDO ? 0 : 1 }, uTilt: { value: new THREE.Vector2(0, 0) }, uCenter: { value: new THREE.Vector2(0, 0) }, uF: { value: 1600 }, uPtr: { value: new THREE.Vector2(0, 0) }, uPtrOn: { value: 0 }, uDpr: { value: 1 }, uJump: { value: new THREE.Vector2(-1, 0) } },
+    transparent: true, depthTest: false, depthWrite: false, side: THREE.DoubleSide,
+    blending: THREE.CustomBlending, blendEquation: THREE.AddEquation, blendSrc: THREE.DstColorFactor, blendDst: THREE.ZeroFactor
+  });
+
+  let clock0 = 0, mesh = null, items = [], hAttr = null, aAttr = null, hovered = -1, visible = true, W = 1, H = 1, CX = 0, CY = 0, punta = [0, 0], encontradas = 0, ciclo = 0;
+  const tilt = { x: 0, y: 0 }, tiltObj = { x: 0, y: 0 };
+  const PROF = 170, F = 1600;
+  function proj(it) {
+    const zr = (it.z - .5) * PROF, x = it.x - CX, y = it.y - CY;
+    const cy = Math.cos(tilt.y), sy = Math.sin(tilt.y), cx = Math.cos(tilt.x), sx = Math.sin(tilt.x);
+    const x1 = x * cy + zr * sy, z1 = -x * sy + zr * cy, y2 = y * cx - z1 * sx, z2 = y * sx + z1 * cx;
+    const k = (F / (F - z2)) / (F / (F - zr));
+    return { x: CX + x1 * k, y: CY + y2 * k, r: it.r * k };
+  }
+
+  function disponer(W, H) {
+    const u = Math.min(W, 1.1 * H);
+    const d = { left: fig.offsetLeft, top: fig.offsetTop, width: fig.offsetWidth, height: fig.offsetHeight };
+    const T = [d.left + d.width * .65, d.top + d.height * .10];
+    const sx = T[0] - .296 * W, sy = T[1] - .591 * H;
+    const cx = .306 * W + sx, cy = .279 * H + sy, rx = .229 * W, ry = .254 * H;
+    const TailL = [[.526, .292], [.562, .292], [.588, .296], [.591, .305]].map(([a, b]) => [a * H + sy, b * W + sx]);
+    const TailR = [[.526, .352], [.546, .337], [.573, .319], [.591, .305]].map(([a, b]) => [a * H + sy, b * W + sx]);
+    const dentro = (x, y) => (((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 <= 1) || (y >= TailL[0][0] && y <= T[1] && x >= interp(TailL, y) && x <= interp(TailR, y));
+    const cabe = (x, y, r) => { if (!dentro(x, y)) return false; for (let i = 0; i < 10; i++) { const a = i / 10 * 6.2831853; if (!dentro(x + Math.cos(a) * r * .95, y + Math.sin(a) * r * .95)) return false; } return true; };
+    const puestos = [];
+    for (const escala of [1, .72, .52, .34]) {
+      for (let t = 0; t < 2600; t++) {
+        const x = R(cx - rx, cx + rx), y = R(cy - ry, T[1]);
+        const dPunta = Math.hypot(x - T[0], y - T[1]);
+        const r = Math.min(Math.max(.011 * u, .055 * u * R(.45, 1) * escala), Math.max(.011 * u, .22 * dPunta));
+        if (!cabe(x, y, r)) continue;
+        if (puestos.some(q => Math.hypot(x - q.x, y - q.y) < (r + q.r) * .72)) continue;
+        puestos.push({ x, y, r });
+      }
+    }
+    puestos.sort((a, b) => a.y - b.y);
+    return { puestos, cx, cy, T };
+  }
+
+  function construir(puestos, anima) {
+    const n = puestos.length;
+    const rMin = Math.min(...puestos.map(p => p.r)), rMax = Math.max(...puestos.map(p => p.r));
+    const A = { z: new Float32Array(n), pos: new Float32Array(n * 2), r: new Float32Array(n), col: new Float32Array(n * 3), face: new Float32Array(n * 4), anim: new Float32Array(n * 4), off: new Float32Array(n * 2), hov: new Float32Array(n), id: new Float32Array(n), shape: new Float32Array(n * 3), idx: new Float32Array(n) };
+    const ids = Object.keys(PALETA);
+    items = puestos.map((p, k) => {
+      const nombre = elegirColor(), c = PALETA[nombre];
+      const forma = p.r < 9 ? 0 : elegirForma();                     // los más chicos siempre son círculos
+      const punto = p.r >= 14 && forma !== 6 && Math.random() < .15;
+      const cara = !punto && p.r >= 11 && (forma === 0 || forma === 1);   // solo las "personas" (círculo y cuadrado) llevan carita
+      const gira = !cara && (forma === 1 || forma === 2 || forma === 3 || forma === 4 || forma === 5);
+      A.pos.set([p.x, p.y], k * 2); A.r[k] = p.r; A.col.set([c[0] / 255, c[1] / 255, c[2] / 255], k * 3);
+      A.id[k] = ids.indexOf(nombre); A.idx[k] = k;
+      const tipo = [1, 1, 2, 3, 4, 1, 4, 2][Math.floor(Math.random() * 8)];
+      A.face.set([cara ? tipo : 0, punto ? 1 : 0, [-5, -3, 0, 0, 3, 5][Math.floor(Math.random() * 6)], R(-14, 14) * Math.PI / 180], k * 4);
+      A.shape.set([forma, R(-25, 25) * Math.PI / 180, gira ? (Math.random() < .5 ? -1 : 1) * 6.2831853 / R(9, 18) : 0], k * 3);
+      // de abajo hacia arriba, una a una, en TOTAL segundos
+      const retardo = (REDUCIDO || !anima) ? 0 : .05 + (n - 1 - k) / n * TOTAL + Math.random() * .03;
+      A.anim.set([retardo, (!REDUCIDO && Math.random() < .35) ? R(5, 10) : 0, R(0, 6.28), 0], k * 4);
+      A.off.set([R(-5, 5), R(-4, 6)], k * 2);
+      const z = Math.min(1, Math.max(0, (p.r - rMin) / (rMax - rMin + 1e-6) * .8 + .1 + R(-.1, .1)));
+      A.z[k] = z;
+      return { x: p.x, y: p.y, r: p.r, cara, forma, egg: 0, z };
+    });
+    const cand = items.map((it, i) => i).filter(i => items[i].cara && items[i].r * 2 >= 34 && items[i].x - items[i].r > W * .01 && items[i].x + items[i].r < W * .99).sort(() => Math.random() - .5);
+    const elegidas = [];
+    cand.forEach(i => { if (elegidas.length < 3 && elegidas.every(j => Math.hypot(items[i].x - items[j].x, items[i].y - items[j].y) > .15 * W)) elegidas.push(i); });
+    elegidas.forEach(i => { items[i].egg = 1; A.anim[i * 4 + 3] = 1; });
+    encontradas = 0;
+
+    const base = new THREE.PlaneGeometry(2, 2);
+    const g = new THREE.InstancedBufferGeometry();
+    g.index = base.index; g.setAttribute('position', base.attributes.position);
+    g.setAttribute('iPos', new THREE.InstancedBufferAttribute(A.pos, 2));
+    g.setAttribute('iR', new THREE.InstancedBufferAttribute(A.r, 1));
+    g.setAttribute('iZ', new THREE.InstancedBufferAttribute(A.z, 1));
+    g.setAttribute('iColor', new THREE.InstancedBufferAttribute(A.col, 3));
+    g.setAttribute('iFace', new THREE.InstancedBufferAttribute(A.face, 4));
+    aAttr = new THREE.InstancedBufferAttribute(A.anim, 4);
+    g.setAttribute('iAnim', aAttr);
+    g.setAttribute('iOff', new THREE.InstancedBufferAttribute(A.off, 2));
+    hAttr = new THREE.InstancedBufferAttribute(A.hov, 1);
+    g.setAttribute('iHover', hAttr);
+    g.setAttribute('iColId', new THREE.InstancedBufferAttribute(A.id, 1));
+    g.setAttribute('iShape', new THREE.InstancedBufferAttribute(A.shape, 3));
+    g.setAttribute('iId', new THREE.InstancedBufferAttribute(A.idx, 1));
+    g.instanceCount = n;
+    if (mesh) { scene.remove(mesh); mesh.geometry.dispose(); }
+    mesh = new THREE.Mesh(g, material);
+    mesh.frustumCulled = false;
+    scene.add(mesh);
+  }
+
+  function mensaje(i) {
+    const it = proj(items[i]), texto = MENSAJES[Math.min(encontradas++, 2)];
+    const m = document.createElement('div');
+    m.className = 'egg-msg'; m.textContent = texto;
+    m.style.left = Math.min(Math.max(it.x, 120), W - 120) + 'px';
+    m.style.top = Math.max(it.y - it.r - 8, 40) + 'px';
+    wrap.appendChild(m); setTimeout(() => m.remove(), 3200);
+    if (REDUCIDO) return;
+    for (let k = 0; k < 10; k++) {
+      const c = document.createElement('i'), a = k / 10 * 6.2831853 + R(-.3, .3), dd = R(40, 90);
+      c.className = 'chispa';
+      c.style.cssText = 'left:' + it.x + 'px;top:' + it.y + 'px;--tx:' + (Math.cos(a) * dd).toFixed(0) + 'px;--ty:' + (Math.sin(a) * dd).toFixed(0) + 'px;background:' + COLORES[k % 4];
+      wrap.appendChild(c); setTimeout(() => c.remove(), 900);
+    }
+  }
+
+  // La nube "viva": un saltito de una figura al azar
+  function vida(mio) {
+    const circulos = items.map((it, i) => i).filter(i => items[i].forma === 0 && !items[i].egg);
+    const salta = () => {
+      if (mio !== ciclo) return;
+      if (!document.hidden && circulos.length) material.uniforms.uJump.value.set(circulos[Math.floor(Math.random() * circulos.length)], material.uniforms.uTime.value);
+      setTimeout(salta, R(700, 1600));
+    };
+    setTimeout(salta, TOTAL * 1000 + 1800);
+  }
+
+  generar = function (reinicia) {
+    if (MOVIL()) { canvas.style.display = 'none'; if (mesh) { scene.remove(mesh); mesh = null; } return; }
+    canvas.style.display = 'block';
+    const r = wrap.getBoundingClientRect();
+    W = r.width; H = r.height;
+    if (!W || !H) return;
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    material.uniforms.uDpr.value = renderer.getPixelRatio();
+    renderer.setSize(W, H, false);
+    camera.left = 0; camera.right = W; camera.top = 0; camera.bottom = H; camera.updateProjectionMatrix();
+    const tl = document.timeline.currentTime;
+    if (!revelada) clock0 = tl + 1e7;                  // la nube espera: aparece cuando Caro llega al cuadro 17
+    else if (reinicia) clock0 = tl;
+    const d = disponer(W, H);
+    CX = d.cx; CY = d.cy; punta = d.T;
+    material.uniforms.uCenter.value.set(CX, CY);
+    construir(d.puestos, reinicia);
+    if (reinicia && revelada && !REDUCIDO) { ciclo++; vida(ciclo); }
+  };
+
+  function bajoCursor(e) {
+    const b = canvas.getBoundingClientRect(), x = e.clientX - b.left, y = e.clientY - b.top;
+    let mejor = -1, mr = 1e9;
+    items.forEach((it, i) => { const q = proj(it); const r = q.r * (1 + .14 * (hAttr.array[i] || 0)); if (Math.hypot(x - q.x, y - q.y) <= r && it.r < mr) { mejor = i; mr = it.r; } });
+    return mejor;
+  }
+  canvas.addEventListener('pointermove', e => { hovered = bajoCursor(e); canvas.style.cursor = hovered >= 0 && items[hovered].egg === 1 ? 'pointer' : 'default'; });
+  canvas.addEventListener('pointerleave', () => { hovered = -1; canvas.style.cursor = 'default'; });
+  addEventListener('pointermove', e => {
+    if (REDUCIDO || e.pointerType === 'touch') return;
+    const b = wrap.getBoundingClientRect();
+    const mx = Math.max(-1, Math.min(1, (e.clientX - b.left - b.width / 2) / (b.width / 2)));
+    const my = Math.max(-1, Math.min(1, (e.clientY - b.top - b.height / 2) / (b.height / 2)));
+    tiltObj.y = mx * .20; tiltObj.x = -my * .14;
+    material.uniforms.uPtr.value.set(e.clientX - b.left, e.clientY - b.top);
+    material.uniforms.uPtrOn.value = 1;
+  }, { passive: true });
+  document.addEventListener('pointerleave', () => { tiltObj.x = tiltObj.y = 0; material.uniforms.uPtrOn.value = 0; });
+  canvas.addEventListener('click', e => {
+    const i = bajoCursor(e);
+    if (i >= 0 && items[i].egg === 1) { items[i].egg = 2; aAttr.array[i * 4 + 3] = 2; aAttr.needsUpdate = true; mensaje(i); }
+  });
+
+  function bucle(ahora) {
+    requestAnimationFrame(bucle);
+    if (!mesh || !visible || document.hidden) return;
+    material.uniforms.uTime.value = (ahora - clock0) / 1000;
+    tilt.x += (tiltObj.x - tilt.x) * .07; tilt.y += (tiltObj.y - tilt.y) * .07;
+    material.uniforms.uTilt.value.set(tilt.x, tilt.y);
+    if (hAttr) {
+      let cambio = false;
+      for (let i = 0; i < items.length; i++) {
+        const objetivo = i === hovered ? 1 : 0, h = hAttr.array[i], n = h + (objetivo - h) * .2;
+        const v = Math.abs(n - objetivo) < .005 ? objetivo : n;
+        if (v !== h) { hAttr.array[i] = v; cambio = true; }
+      }
+      if (cambio) hAttr.needsUpdate = true;
+    }
+    renderer.render(scene, camera);
+  }
+  requestAnimationFrame(bucle);
+  new IntersectionObserver(es => { visible = es[0].isIntersecting; }).observe(wrap);
+  let tmr;
+  addEventListener('resize', () => { if (!revelada) return; clearTimeout(tmr); tmr = setTimeout(() => generar(false), 250); });
+  cloud = { THREE, material };
+}
+
+// ───────── El clic despierta a Caro ─────────
+fig.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fig.click(); } });
+fig.addEventListener('click', () => {
+  const primera = !despierta;
+  despierta = true;
+  clearTimeout(timerGuion); clearTimeout(timerZ); clearTimeout(timerSorpresa);
+  document.body.classList.remove('dormida');
+  const heroEl = document.querySelector('.hero');
+  if (!primera) { revelada = false; generar(false); heroEl.classList.remove('con-nube'); }   // en clics siguientes la nube anterior se va y vuelve a armarse
+  const nubeAparece = () => { revelada = true; generar(true); heroEl.classList.add('con-nube'); };   // la nube y los puntos flotantes aparecen juntos, cuando llega el cuadro 17
+  if (REDUCIDO) { img.src = FR(17); revelada = true; generar(false); heroEl.classList.add('con-nube'); } else despertar(nubeAparece);
+  sorpresa(primera);
+  if (primera) {
+    if (REDUCIDO) mostrarTodo();
+    else { entra('.hero-texto', 220); entra('.nav ul', 220, 80); entra('.nav-logo', 220, 40); }
+  }
+});
+  </script>
+<script>
+// Adornos de "Sobre mí": puntos sueltos en los márgenes y un racimo de tres círculos que asoma por el borde derecho.
+// Siempre quedan detrás del contenido y en zonas libres; se reparten distinto en cada carga, como la nube del hero.
+(function () {
+  var sec = document.getElementById('sobre-mi'); if (!sec) return;
+  var wrap = sec.querySelector('.wrap'); if (!wrap) return;
+  var cap = document.createElement('div'); cap.className = 'adornos'; cap.setAttribute('aria-hidden', 'true'); sec.insertBefore(cap, sec.firstChild);
+  var COL = ['#6CD0CD', '#FFB700', '#FF495C', '#B6E8E6', '#FFDB7A', '#FFA4AE'];
+  var R = function (a, b) { return a + Math.random() * (b - a); };
+  var mk = function (x, y, r, col, forma) {
+    var d = document.createElement('i'); d.className = 'adorno' + (forma ? ' ' + forma : '');
+    if (forma) d.style.rotate = Math.round(R(-25, 25)) + 'deg';
+    d.style.cssText = 'left:' + (x - r).toFixed(1) + 'px;top:' + (y - r).toFixed(1) + 'px;width:' + (r * 2).toFixed(1) + 'px;height:' + (r * 2).toFixed(1) + 'px;background:' + col + ';--fd:' + R(5, 9).toFixed(1) + 's;--fl:-' + R(0, 6).toFixed(1) + 's';
+    cap.appendChild(d); return d;
+  };
+  function poner() {
+    cap.textContent = '';
+    var S = sec.getBoundingClientRect(), W = S.width, H = S.height, w = wrap.getBoundingClientRect();
+    if (!W || !H) return;
+    var ml = w.left - S.left, mr = S.right - w.right, padT = w.top - S.top, padB = S.bottom - w.bottom;
+    var zonas = [];                                                       // rectángulos libres [x0, y0, x1, y1]
+    if (ml > 70) zonas.push([10, 10, ml - 24, H - 10]);
+    if (mr > 70) zonas.push([W - mr + 24, 10, W - 10, H - 10]);
+    if (padT > 40) zonas.push([10, 6, W - 10, padT - 22]);
+    if (padB > 40) zonas.push([10, H - padB + 22, W - 10, H - 8]);
+    if (!zonas.length) return;
+    var puestos = [], area = function (z) { return Math.max(1, (z[2] - z[0]) * (z[3] - z[1])); }, total = zonas.reduce(function (a, z) { return a + area(z); }, 0);
+    // racimo de tres círculos que superponen (mezcla multiplicativa) y se salen por el borde derecho
+    var ancho = mr > 110;
+    var k = ancho ? 1 : .5, r1 = R(52, 64) * k, cx = W - 26 * k, cy = ancho ? H * R(.5, .68) : Math.max(r1 + 6, padT * .45);
+    var c1 = mk(cx, cy, r1, '#6CD0CD'), c2 = mk(cx - r1 * .78, cy + r1 * .72, r1 * .66, '#FFB700'), c3 = mk(cx - r1 * 1.05, cy - r1 * .15, r1 * .42, '#FF495C');
+    puestos.push([cx - r1 * .5, cy + r1 * .2, r1 * 1.5]);
+    var n = W < 700 ? 4 : 7;
+    for (var i = 0; i < n; i++) {
+      var r = i < 2 ? R(20, 32) * (W < 700 ? .7 : 1) : R(6, 15), ok = false, x, y;
+      for (var t = 0; t < 80 && !ok; t++) {
+        var v = Math.random() * total, z = zonas[0];
+        for (var j = 0; j < zonas.length; j++) { v -= area(zonas[j]); if (v <= 0) { z = zonas[j]; break; } }
+        x = R(z[0] + r, z[2] - r); y = R(z[1] + r, z[3] - r);
+        if (x < z[0] || y < z[1] || z[2] - z[0] < 2 * r || z[3] - z[1] < 2 * r) continue;
+        ok = puestos.every(function (q) { return Math.hypot(x - q[0], y - q[1]) > r + q[2] + 14; });
+      }
+      if (!ok) continue;
+      var f = Math.random(), forma = f < .34 ? 'cuad' : (f < .68 ? 'tri' : '');          // un tercio cuadrados, un tercio triángulos, el resto círculos
+      puestos.push([x, y, r]); mk(x, y, r, COL[Math.floor(Math.random() * COL.length)], forma);
+    }
+  }
+  var tmr; poner();
+  addEventListener('load', poner);
+  (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(poner);
+  addEventListener('resize', function () { clearTimeout(tmr); tmr = setTimeout(poner, 250); });
+  new ResizeObserver(function () { clearTimeout(tmr); tmr = setTimeout(poner, 300); }).observe(sec);
+})();
+</script>
+<script>
+// Puntos chicos y sueltos en el hero (en las zonas libres, junto al texto): aparecen cuando Caro despierta y flotan muy despacio
+(function () {
+  var hero = document.querySelector('.hero'), texto = document.querySelector('.hero-texto'); if (!hero || !texto) return;
+  var cap = document.createElement('div'); cap.className = 'adornos adornos-hero'; cap.setAttribute('aria-hidden', 'true'); hero.appendChild(cap);
+  var COL = ['#6CD0CD', '#FFB700', '#FF495C', '#B6E8E6', '#FFDB7A', '#FFA4AE'];
+  var R = function (a, b) { return a + Math.random() * (b - a); };
+  function poner() {
+    cap.textContent = '';
+    if (matchMedia('(max-width: 52rem)').matches) return;                      // en móvil no hay espacio libre: sin puntos
+    var H0 = hero.getBoundingClientRect(), W = H0.width, H = H0.height, t = texto.getBoundingClientRect();
+    if (!W || !H) return;
+    var tx0 = t.left - H0.left, tx1 = t.right - H0.left, ty0 = t.top - H0.top;
+    var zonas = [
+      [W * .5, 100, W - 14, Math.max(ty0 - 26, 130)],                         // (debajo de la barra de navegación)                           // el aire sobre el texto, a la derecha
+      [Math.min(tx1 + 24, W - 40), ty0 - 10, W - 12, H - 14]                  // el margen a la derecha del texto
+    ].filter(function (z) { return z[2] - z[0] > 24 && z[3] - z[1] > 24; });
+    if (!zonas.length) return;
+    var area = function (z) { return (z[2] - z[0]) * (z[3] - z[1]); }, total = zonas.reduce(function (a, z) { return a + area(z); }, 0), puestos = [];
+    for (var i = 0; i < 5; i++) {
+      var r = R(4, 10), ok = false, x, y;
+      for (var k = 0; k < 80 && !ok; k++) {
+        var v = Math.random() * total, z = zonas[0];
+        for (var j = 0; j < zonas.length; j++) { v -= area(zonas[j]); if (v <= 0) { z = zonas[j]; break; } }
+        x = R(z[0] + r, z[2] - r); y = R(z[1] + r, z[3] - r);
+        ok = puestos.every(function (q) { return Math.hypot(x - q[0], y - q[1]) > r + q[2] + 40; });
+      }
+      if (!ok) continue;
+      puestos.push([x, y, r]);
+      var d = document.createElement('i'); d.className = 'adorno';
+      d.style.cssText = 'left:' + (x - r).toFixed(1) + 'px;top:' + (y - r).toFixed(1) + 'px;width:' + (r * 2).toFixed(1) + 'px;height:' + (r * 2).toFixed(1) + 'px;background:' + COL[Math.floor(Math.random() * COL.length)] + ';--fd:' + R(5, 9).toFixed(1) + 's;--fl:-' + R(0, 6).toFixed(1) + 's';
+      cap.appendChild(d);
+    }
+  }
+  var tmr; poner(); addEventListener('load', poner);
+  (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(poner);
+  addEventListener('resize', function () { clearTimeout(tmr); tmr = setTimeout(poner, 250); });
+  addEventListener('intro', function () { setTimeout(poner, 100); });
+})();
+</script>
+<script>
+// Pantalla en blanco con un spinner hasta que cargan fuentes e imágenes; después arranca la secuencia de entrada.
+(function () {
+  var hecho = false;
+  function listo() {
+    if (hecho) return; hecho = true;
+    requestAnimationFrame(function () { requestAnimationFrame(function () {
+      window.__arranque = document.timeline.currentTime;
+      document.body.classList.remove('cargando');
+      window.dispatchEvent(new Event('intro'));
+      setTimeout(function () { var c = document.querySelector('.cargador'); if (c) c.remove(); }, 800);
+    }); });
+  }
+  var carga = new Promise(function (r) { if (document.readyState === 'complete') r(); else addEventListener('load', r, { once: true }); });
+  Promise.all([carga, document.fonts ? document.fonts.ready : 0]).then(listo, listo);
+  setTimeout(listo, 5000);   // por si algo tarda demasiado
+})();
+</script>
+</body>
+</html>
