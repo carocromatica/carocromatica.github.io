@@ -409,4 +409,18 @@ body:not(.cargando) .cargador { opacity: 0; visibility: hidden; }
 @keyframes gira { to { transform: rotate(360deg); } }
 body.cargando { overflow: hidden; }
 body.v3.cargando :is(.nav-logo, .nav ul, .hero-texto, .disenadora-hero) { animation-play-state: paused; }
+/* Caro duerme: solo se ve ella con un mensaje. El clic la despierta y entra todo lo demás. */
+body.v3.dormida :is(.nav-logo, .nav ul, .hero-texto) { animation-play-state: paused; pointer-events: none; }
+body.dormida { overflow: hidden; }
+.disenadora-hero { cursor: pointer; }
+.disenadora-hero:focus-visible { outline: 3px solid var(--teal); outline-offset: 6px; border-radius: 12px; }
+.despierta-msg { position: absolute; left: 50%; bottom: 100%; transform: translate(-50%, -4px); white-space: nowrap; font: 600 .95rem/1 'Atkinson Hyperlegible Next', system-ui, sans-serif; color: var(--ink); background: #fff; border: 2px solid var(--ink); border-radius: 999px; padding: .55em 1em; pointer-events: none; animation: mensaje-late 1.8s ease-in-out infinite; }
+.despierta-msg::after { content: ''; position: absolute; left: 50%; top: 100%; width: 10px; height: 10px; background: #fff; border: solid var(--ink); border-width: 0 2px 2px 0; transform: translate(-50%, -6px) rotate(45deg); }
+body:not(.dormida) .despierta-msg { opacity: 0; transition: opacity .3s; animation: none; }
+@keyframes mensaje-late { 0%, 100% { transform: translate(-50%, -4px); } 50% { transform: translate(-50%, -12px); } }
+@media (prefers-reduced-motion: reduce) { .despierta-msg { animation: none; } }
 @media (prefers-reduced-motion: reduce) { .cargador span { animation-duration: 2s; } }
+
+/* Mientras Caro duerme no se ve nada más: ni navbar, ni secciones, ni caritas, ni barra de scroll */
+html:has(body.dormida) { overflow: hidden; }
+body.dormida .nav, body.dormida main > section:not(.hero), body.dormida footer, body.dormida .caritas3d { display: none; }

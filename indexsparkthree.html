@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   <link rel="stylesheet" href="indexspark.css">
 </head>
-<body class="v2 v3 cargando">
+<body class="v2 v3 cargando dormida">
   <div class="cargador" role="status" aria-label="Cargando"><span></span></div>
   <header class="nav">
     <nav class="wrap" aria-label="Principal">
@@ -30,8 +30,9 @@
       <div class="nube-wrap">
           <p class="sr-only">Ilustración: una nube de pensamiento formada por círculos de colores, cada uno es un usuario, que sale de la cabeza de la diseñadora.</p>
           <canvas id="nubeCanvas" class="nube-canvas" aria-hidden="true"></canvas>
-          <figure class="disenadora disenadora-hero" id="disenadora" title="Haz clic para que piense otra nube">
-          <img src="spark/carocromatica.svg" alt="Ilustración de Carolina Torres pensando en sus usuarios" width="1173" height="1347">
+          <figure class="disenadora disenadora-hero" id="disenadora" title="Despierta a Caro" role="button" tabindex="0" aria-label="Despierta a Caro">
+          <img src="spark/carocromatica-durmiendo.svg" alt="Ilustración de Carolina Torres pensando en sus usuarios" width="1173" height="1347">
+          <span class="despierta-msg" aria-hidden="true">Despierta a Caro</span>
         </figure>
         
         </div>
@@ -291,7 +292,7 @@ if (wrap && canvas) {
     blending: THREE.CustomBlending, blendEquation: THREE.AddEquation, blendSrc: THREE.DstColorFactor, blendDst: THREE.ZeroFactor
   });
 
-  let clock0 = 0, retardoBase = 2.0, arranque = window.__arranque ?? null;   // línea de tiempo de la secuencia de entrada
+  let clock0 = 0, retardoBase = .1, revelada = false, primera = true;   // línea de tiempo de la secuencia de entrada
   let mesh = null, items = [], hAttr = null, aAttr = null, hovered = -1, t0 = performance.now(), visible = true, W = 1, H = 1;
   let CX = 0, CY = 0;                                  // centro de la nube (eje de la rotación 3D)
   const tilt = { x: 0, y: 0 }, tiltObj = { x: 0, y: 0 };
@@ -396,7 +397,7 @@ if (wrap && canvas) {
     }
   }
 
-  function generar() {
+  function generar(reinicia) {
     if (MOVIL()) { canvas.style.display = 'none'; if (mesh) { scene.remove(mesh); mesh = null; } return; }   // en móvil no hay globo
     canvas.style.display = 'block';
     const r = wrap.getBoundingClientRect();
@@ -408,9 +409,8 @@ if (wrap && canvas) {
     // Secuencia: diseñadora (izq → der) y textos (der → izq) se juntan al medio → pausa → nube (abajo → arriba).
     // El reloj arranca cuando se quita la pantalla de carga (evento 'intro').
     const tl = document.timeline.currentTime;
-    if (arranque === null) clock0 = tl + 1e7;                      // todavía cargando: la nube espera oculta
-    else if (tl - arranque > 8000) { clock0 = tl; retardoBase = .1; }   // regeneraciones posteriores (clic, resize): animación corta
-    else clock0 = arranque;
+    if (!revelada) clock0 = tl + 1e7;                              // la nube no aparece sola: espera a que la toquen
+    else if (reinicia) { clock0 = tl; retardoBase = primera ? 2.0 : .1; primera = false; }   // 1.ª vez: textos, pausa y nube          // cada clic arma una nube nueva, de abajo hacia arriba
     const d = disponer(W, H);
     CX = d.cx; CY = d.cy;
     material.uniforms.uCenter.value.set(CX, CY);
@@ -463,13 +463,41 @@ if (wrap && canvas) {
   requestAnimationFrame(bucle);
   new IntersectionObserver(es => { visible = es[0].isIntersecting; }).observe(wrap);
 
-  addEventListener('intro', () => { arranque = window.__arranque; clock0 = arranque; });
   generar();
   let tmr;
   addEventListener('resize', () => { clearTimeout(tmr); tmr = setTimeout(generar, 250); });
-  addEventListener('load', generar);
+  addEventListener('load', () => generar());
+  // Caro cabecea de sueño; un clic la despierta: sorprendida → Caro, y aparecen sus pensamientos.
   if (disenadora) {
-    disenadora.addEventListener('click', generar);
+    const img = disenadora.querySelector('img');
+    const F = n => 'spark/carocromatica' + (n ? '-' + n : '') + '.svg';
+    ['durmiendo', 'despertando', 'sorprendida', ''].forEach(n => { new Image().src = F(n); });
+    // Cabecea de sueño sin parar (durmiendo ↔ despertando) hasta que alguien la despierta con un clic.
+    const guion = [['durmiendo', 2400], ['despertando', 800], ['durmiendo', 1600], ['despertando', 1000]];
+    let despierta = false, timerGuion;
+    const arrancarGuion = () => {
+      let i = 0;
+      const paso = () => {
+        if (despierta) return;
+        const [n, dur] = guion[i++ % guion.length];
+        img.src = F(n);
+        timerGuion = setTimeout(paso, dur);
+      };
+      paso();
+    };
+    if (REDUCIDO) img.src = F('durmiendo');
+    else if (window.__arranque != null) arrancarGuion();
+    else addEventListener('intro', arrancarGuion, { once: true });
+    let timerSorpresa;
+    disenadora.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); disenadora.click(); } });
+    disenadora.addEventListener('click', () => {
+      revelada = true; generar(true);
+      document.body.classList.remove('dormida');          // aparece todo lo demás: textos, nav y (tras una pausa) la nube
+      despierta = true; clearTimeout(timerGuion);     // el clic la despierta: se acaba el cabeceo
+      clearTimeout(timerSorpresa);
+      img.src = F('sorprendida');
+      timerSorpresa = setTimeout(() => { img.src = F(''); }, 1400);
+    });
     new IntersectionObserver((es, o) => es.forEach(e => { if (e.isIntersecting) { disenadora.classList.add('visible'); o.disconnect(); } }), { threshold: .2 }).observe(disenadora);
   }
 }
