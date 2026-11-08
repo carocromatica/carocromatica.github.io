@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[three.js] Carolina Torres (Carocromatica) — Product Designer y Front-End Developer</title>
+  <meta name="description" content="Carolina Torres (Carocromatica), Product Designer y Front-End Developer. Construyo experiencias digitales pensando en las personas.">
+  <link rel="icon" href="./svg/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;700&family=Atkinson+Hyperlegible+Next:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" href="indexspark.css">
+</head>
+<body class="v2 v3 cargando">
+  <div class="cargador" role="status" aria-label="Cargando"><span></span></div>
+  <header class="nav">
+    <nav class="wrap" aria-label="Principal">
+      <a class="nav-logo" href="#top" aria-label="Carocromatica, inicio"><img src="spark/marca.svg" alt="" width="52" height="52"></a>
+      <ul>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-t">
+      <div class="nube-wrap">
+          <p class="sr-only">Ilustración: una nube de pensamiento formada por círculos de colores, cada uno es un usuario, que sale de la cabeza de la diseñadora.</p>
+          <canvas id="nubeCanvas" class="nube-canvas" aria-hidden="true"></canvas>
+          <figure class="disenadora disenadora-hero" id="disenadora" title="Haz clic para que piense otra nube">
+          <img src="spark/carocromatica.svg" alt="Ilustración de Carolina Torres pensando en sus usuarios" width="1173" height="1347">
+        </figure>
+        
+        </div>
+
+      <div class="wrap hero-grid">
+        <div class="hero-texto">
+          <p class="saludo">Hola, soy <span class="hl">Caro</span>.</p>
+          <h1 id="hero-t">Product Designer y Front-End Developer.</h1>
+          <p class="hero-sub">Construyo experiencias digitales pensando en las personas.</p>
+          <div class="cta">
+            <a class="btn" href="#proyectos">Ver proyectos <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            <a class="btn ghost" href="./cv/Carolina%20torres%20cv%202018.pdf">Descargar CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="sobre-mi" aria-labelledby="sobre-t">
+      <div class="wrap">
+        <h2 id="sobre-t">Sobre <span class="hl">mí</span></h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>Soy Carolina Torres Durán, diseñadora de productos digitales en Chile. <strong class="destacado">Me gusta entender cómo trabaja la gente de verdad</strong>. Entre planillas, atajos y tareas manuales encuentro pistas para diseñar.</p>
+          <p>Combino investigación, diseño de servicios y front-end. <strong class="destacado">A veces una buena solución empieza por ordenar quién hace qué</strong>. Otras, por probar una idea en código. Mi parte favorita es verla llegar a producción y hacerle el día más fácil a alguien.</p>
+          <p>También <strong class="destacado">soy docente en Duoc UC</strong>, donde me formé. Hoy enseño diseño de productos digitales y desarrollo web a estudiantes de Ingeniería en Marketing.</p>
+            <div class="links">
+            <a href="./cv/Carolina%20torres%20cv%202018.pdf"><i class="far fa-file-alt" aria-hidden="true"></i> Descargar CV</a>
+            <a href="https://github.com/carocromatica" target="_blank" rel="noopener"><i class="fab fa-github-alt" aria-hidden="true"></i> GitHub</a>
+            <a href="https://www.behance.net/carocromatica" target="_blank" rel="noopener"><i class="fab fa-behance" aria-hidden="true"></i> Behance</a>
+            <a href="https://www.linkedin.com/in/carocromatica/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a>
+          </div>
+          </div>
+          <ul class="keywords" aria-label="Especialidades">
+            <li><img src="svg/investigacion-ux.svg" alt="" width="44" height="44"><span>Investigación UX</span></li>
+            <li><img src="svg/diseno-de-servicios.svg" alt="" width="44" height="44"><span>Diseño de servicios</span></li>
+            <li><img src="svg/diseno-ux-ui.svg" alt="" width="44" height="44"><span>Diseño UX/UI</span></li>
+            <li><img src="svg/desarrollo-front-end.svg" alt="" width="44" height="44"><span>Desarrollo front-end</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="skills" aria-labelledby="skills-t">
+      <div class="wrap">
+        <h2 id="skills-t">Tech <span class="hl">skills</span></h2>
+        <ul class="skill-list">
+        <li><span class="skill-disc"><img src="./svg/js.png" alt="" width="42" height="42"></span><span>JavaScript</span></li>
+        <li><span class="skill-disc"><img src="./svg/html.png" alt="" width="42" height="42"></span><span>HTML5</span></li>
+        <li><span class="skill-disc"><img src="./svg/css.png" alt="" width="42" height="42"></span><span>CSS3</span></li>
+        <li><span class="skill-disc"><img src="./svg/react.png" alt="" width="42" height="42"></span><span>React.js</span></li>
+        <li><span class="skill-disc"><img src="./svg/firebase.png" alt="" width="42" height="42"></span><span>Firebase</span></li>
+        <li><span class="skill-disc"><img src="./svg/materialize.png" alt="" width="42" height="42"></span><span>Materialize</span></li>
+        <li><span class="skill-disc"><img src="./svg/bootstrap.png" alt="" width="42" height="42"></span><span>Bootstrap</span></li>
+        <li><span class="skill-disc"><img src="./svg/git.png" alt="" width="42" height="42"></span><span>Git</span></li>
+        <li><span class="skill-disc"><img src="./svg/github.png" alt="" width="42" height="42"></span><span>GitHub</span></li>
+        <li><span class="skill-disc"><img src="./svg/photoshop.png" alt="" width="42" height="42"></span><span>Photoshop</span></li>
+        <li><span class="skill-disc"><img src="./svg/illustrator.png" alt="" width="42" height="42"></span><span>Illustrator</span></li>
+        <li><span class="skill-disc"><img src="./svg/xd.png" alt="" width="42" height="42"></span><span>Adobe XD</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sec" id="proyectos" aria-labelledby="proy-t">
+      <div class="wrap">
+        <h2 id="proy-t">Proyectos <span class="hl">realizados</span></h2>
+      <article class="proj" style="--c:var(--coral);--c2:var(--amber)">
+        <div class="proj-art">
+          <i class="punto" aria-hidden="true"></i><i class="anillo" aria-hidden="true"></i>
+          <div class="disc"><img src="./svg/ecogo.png" alt="Pantallas de la app EcoGO!" width="800" height="622" loading="lazy"></div>
+        </div>
+        <div>
+          <h3>EcoGO!</h3>
+          <p>EcoGO! fue el proyecto ganador de la Hackaton "Open House Laboratoria". Es una propuesta que busca incentivar el reciclaje a través de la gamificación y utilizando las API de geolocalización de HERE. Desarrollado totalmente con JavaScript, el proyecto además utiliza validación con QR, autentificación y almacenamiento de datos en Firebase y conexión a Facebook.</p>
+          <ul class="tags" aria-label="Tecnologías"><li>JavaScript</li><li>Firebase</li><li>API HERE</li><li>QR</li></ul>
+          <div class="cta">
+            <a class="btn" href="https://carocromatica.github.io/Proyecto-Here/" target="_blank" rel="noopener"><i class="fas fa-play-circle" aria-hidden="true"></i> Ver demo</a>
+            <a class="btn ghost" href="https://github.com/carocromatica/Proyecto-Here" target="_blank" rel="noopener"><i class="fas fa-code" aria-hidden="true"></i> Código</a>
+          </div>
+        </div>
+      </article>
+      <article class="proj flip" style="--c:var(--teal);--c2:var(--coral)">
+        <div class="proj-art">
+          <i class="punto" aria-hidden="true"></i><i class="anillo" aria-hidden="true"></i>
+          <div class="disc"><img src="./svg/synapp.png" alt="Pantallas de Synapse Social Network" width="800" height="622" loading="lazy"></div>
+        </div>
+        <div>
+          <h3>Synapse Social Network</h3>
+          <p>Synapse es una red social enfocada al aprendizaje. Es mi primer proyecto desarrollado con React, cuenta con autentificación con Firebase y Google.</p>
+          <ul class="tags" aria-label="Tecnologías"><li>React</li><li>Firebase</li><li>Google Auth</li></ul>
+          <div class="cta">
+            <a class="btn" href="https://carocromatica.github.io/synapp/" target="_blank" rel="noopener"><i class="fas fa-play-circle" aria-hidden="true"></i> Ver demo</a>
+            <a class="btn ghost" href="https://github.com/carocromatica/synapp" target="_blank" rel="noopener"><i class="fas fa-code" aria-hidden="true"></i> Código</a>
+          </div>
+        </div>
+      </article>
+      <article class="proj" style="--c:var(--amber);--c2:var(--teal)">
+        <div class="proj-art">
+          <i class="punto" aria-hidden="true"></i><i class="anillo" aria-hidden="true"></i>
+          <div class="disc"><img src="./svg/translab.png" alt="Pantallas de la app Translab" width="800" height="622" loading="lazy"></div>
+        </div>
+        <div>
+          <h3>Translab</h3>
+          <p>Translab es un pequeño, pero práctico proyecto que simula una APP. Su objetivo es almacenar y calcular las cargas de las tarjetas Bip! Utiliza Firebase, consumo de API y está desarrollado totalmente con JavaScript.</p>
+          <ul class="tags" aria-label="Tecnologías"><li>JavaScript</li><li>Firebase</li><li>API</li></ul>
+          <div class="cta">
+            <a class="btn" href="https://carocromatica.github.io/TranslabFirebase/src/" target="_blank" rel="noopener"><i class="fas fa-play-circle" aria-hidden="true"></i> Ver demo</a>
+            <a class="btn ghost" href="https://github.com/carocromatica/TranslabFirebase" target="_blank" rel="noopener"><i class="fas fa-code" aria-hidden="true"></i> Código</a>
+          </div>
+        </div>
+      </article>
+      <article class="proj flip" style="--c:var(--ink);--c2:var(--coral)">
+        <div class="proj-art">
+          <i class="punto" aria-hidden="true"></i><i class="anillo" aria-hidden="true"></i>
+          <div class="disc"><img src="./svg/pinterest.png" alt="Réplica de Pinterest en varios dispositivos" width="1000" height="732" loading="lazy"></div>
+        </div>
+        <div>
+          <h3>Pinterest Replica</h3>
+          <p>Réplica de Pinterest realizada con React. Utiliza consumo de API, además de su propio buscador para cargar las imágenes. Diseño responsivo realizado solo con CSS.</p>
+          <ul class="tags" aria-label="Tecnologías"><li>React</li><li>API</li><li>CSS</li></ul>
+          <div class="cta">
+            <a class="btn" href="https://carocromatica.github.io/svalley/" target="_blank" rel="noopener"><i class="fas fa-play-circle" aria-hidden="true"></i> Ver demo</a>
+            <a class="btn ghost" href="https://github.com/carocromatica/svalley" target="_blank" rel="noopener"><i class="fas fa-code" aria-hidden="true"></i> Código</a>
+          </div>
+        </div>
+      </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sec contacto" id="contacto">
+    <i class="ac a1" aria-hidden="true"></i><i class="ac a2" aria-hidden="true"></i><i class="ac a3" aria-hidden="true"></i>
+    <div class="wrap">
+      <h2>¿Hablamos<span class="hl">?</span></h2>
+      <a class="correo" href="mailto:ca.torresduran@gmail.com">ca.torresduran@gmail.com</a>
+      <ul class="contacto-lista">
+        <li><a href="https://github.com/carocromatica" target="_blank" rel="noopener"><i class="fab fa-github-alt" aria-hidden="true"></i> GitHub</a></li>
+        <li><a href="https://www.behance.net/carocromatica" target="_blank" rel="noopener"><i class="fab fa-behance" aria-hidden="true"></i> Behance</a></li>
+        <li><a href="https://www.linkedin.com/in/carocromatica/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a></li>
+        <li><a href="./cv/Carolina%20torres%20cv%202018.pdf"><i class="far fa-file-alt" aria-hidden="true"></i> Curriculum</a></li>
+        <li><a href="https://app.talento.laboratoria.la/profile/8ibsIIPkJ1aaruHDT4MYyW7eWAL2" target="_blank" rel="noopener"><i class="fas fa-code" aria-hidden="true"></i> Talento Laboratoria</a></li>
+      </ul>
+      <p class="pie">© Carolina Torres · Carocromatica</p>
+    </div>
+  </footer>
+
+  <script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js" } }</script>
+  <script type="module">
+import * as THREE from 'three';
+
+// La nube de pensamiento, ahora en WebGL (three.js): cada círculo es una instancia de un solo mesh,
+// y la carita, la trama y la animación de entrada se dibujan en el shader.
+const wrap = document.querySelector('.nube-wrap');
+const canvas = document.getElementById('nubeCanvas');
+const disenadora = document.getElementById('disenadora');
+if (wrap && canvas) {
+  const R = (a, b) => a + Math.random() * (b - a);
+  const REDUCIDO = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const MOVIL = () => matchMedia('(max-width: 52rem)').matches;
+
+  const PALETA = { teal: [108, 208, 205], amber: [255, 183, 0], coral: [255, 73, 92], 'coral-d': [209, 38, 62], 'teal-l': [182, 232, 230], 'amber-l': [255, 219, 122], 'coral-l': [255, 164, 174] };
+  const PESOS = [['teal', 18], ['amber', 18], ['coral', 17], ['coral-d', 8], ['teal-l', 9], ['amber-l', 8], ['coral-l', 6]];
+  const elegirColor = () => { let v = Math.random() * PESOS.reduce((a, c) => a + c[1], 0); for (const [n, w] of PESOS) { v -= w; if (v <= 0) return n; } return 'teal'; };
+  const MENSAJES = ['¡Me encontraste! Soy un usuario secreto.', 'Shhh… ¿ya viste los proyectos más abajo?', 'Tres de tres. Gracias por mirar con tanta atención.'];
+
+  function interp(pts, y) {
+    if (y <= pts[0][0]) return pts[0][1];
+    for (let i = 1; i < pts.length; i++) if (y <= pts[i][0]) { const t = (y - pts[i - 1][0]) / (pts[i][0] - pts[i - 1][0]); return pts[i - 1][1] + (pts[i][1] - pts[i - 1][1]) * t; }
+    return pts[pts.length - 1][1];
+  }
+
+  // ───────── Escena ─────────
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, alpha: false, powerPreference: 'low-power' });
+  renderer.outputColorSpace = THREE.LinearSRGBColorSpace;   // los colores se escriben tal cual (sRGB), sin conversión
+  renderer.setClearColor(0xffffff, 1);
+  const scene = new THREE.Scene();
+  const camera = new THREE.OrthographicCamera(0, 1, 0, 1, -1, 1);   // unidades = píxeles, y hacia abajo
+
+  const VERT = /* glsl */`
+    attribute vec2 iPos; attribute float iR; attribute vec3 iColor; attribute float iZ;
+    attribute vec4 iFace;   // x tipo de carita (0 ninguna), y trama (1 puntos), z mirada, w rotación
+    attribute vec4 iAnim;   // x retardo, y periodo de flote (0 = quieto), z fase, w huevo (0 no, 1 sí, 2 descubierto)
+    attribute vec2 iOff; attribute float iHover; attribute float iColId;
+    uniform float uTime; uniform float uMotion; uniform vec2 uTilt; uniform vec2 uCenter; uniform float uF;
+    varying vec2 vUv; varying vec3 vColor; varying vec4 vFace; varying float vE; varying float vR; varying float vEgg; varying float vColId; varying vec2 vCenter;
+    void main() {
+      // Entrada: cada círculo llega volando desde la cámara y se asienta con un resorte
+      float t = uMotion > .5 ? clamp((uTime - iAnim.x) / 1.1, 0., 1.) : 1.;
+      float e = t >= 1. ? 1. : 1. - exp(-6. * t) * cos(11. * t);
+      float zRest = (iZ - .5) * 170.;                      // profundidad: los grandes cerca, los chicos lejos
+      float z = zRest + (1. - e) * 1000.;
+      vec2 p = iPos + iOff * iR * (1. - e);
+      if (iAnim.y > 0. && uMotion > .5 && t >= 1.) p.y -= .05 * 2. * iR * (.5 + .5 * sin(6.2831853 * (uTime / iAnim.y) + iAnim.z));
+      // Rotación 3D suave de toda la nube según el cursor + perspectiva (en reposo queda idéntica al diseño plano)
+      vec3 q = vec3(p - uCenter, z);
+      float cy = cos(uTilt.y), sy = sin(uTilt.y), cx = cos(uTilt.x), sx = sin(uTilt.x);
+      float x1 = q.x * cy + q.z * sy; float z1 = -q.x * sy + q.z * cy;
+      float y2 = q.y * cx - z1 * sx;  float z2 = q.y * sx + z1 * cx;
+      float k = (uF / (uF - z2)) / (uF / (uF - zRest));
+      vec2 sp = uCenter + vec2(x1, y2) * k;
+      float s = iR * k * (1. + .14 * iHover);
+      vUv = position.xy; vColor = iColor; vFace = iFace; vE = clamp(t * 3., 0., 1.); vR = max(s, 1.); vEgg = iAnim.w; vColId = iColId; vCenter = sp;
+      gl_Position = projectionMatrix * viewMatrix * vec4(sp + position.xy * s, 0., 1.);
+    }`;
+
+  const FRAG = /* glsl */`
+    varying vec2 vUv; varying vec3 vColor; varying vec4 vFace; varying float vE; varying float vR; varying float vEgg; varying float vColId; varying vec2 vCenter;
+    uniform float uTime; uniform vec2 uPtr; uniform float uPtrOn;
+    float cov(float d, float aa) { return 1. - smoothstep(-aa, aa, d); }
+    float sdSeg(vec2 p, vec2 a, vec2 b) { vec2 pa = p - a, ba = b - a; float h = clamp(dot(pa, ba) / dot(ba, ba), 0., 1.); return length(pa - ba * h); }
+    void main() {
+      float aa = 1.2 / vR;
+      float d = length(vUv) - 1.;
+      float edge = cov(d, aa);
+      if (edge <= 0.) discard;
+      vec3 col = vColor;
+      vec3 ink = vec3(30., 37., 43.) / 255.;
+      // trama de puntos
+      if (vFace.y > .5) {
+        vec2 g = fract(vUv * 3.4 + 7.) - .5;
+        col = mix(col, ink, .42 * (1. - smoothstep(.10, .14, length(g))));
+      }
+      // carita
+      float ft = vFace.x;
+      if (ft > .5) {
+        float a = vFace.w; float c = cos(a), s = sin(a);
+        mat2 rm = mat2(c, -s, s, c); vec2 p = rm * vUv;
+        vec2 look = uPtrOn > .5 ? uPtr - vCenter : vec2(0.);
+        float dl = length(look); look = dl > 1. ? look / dl * min(1., dl / 260.) : vec2(0.);   // hacia dónde está el cursor
+        vec2 lk = rm * look; vec2 pm = p - lk * .06;
+        vec3 fc = vColId > 2.5 && vColId < 3.5 ? vec3(1., .72, 0.) : ink;
+        float on = vEgg > 1.5 ? 1. : 0.;
+        float blink = 1.;
+        if (vEgg > .5 && vEgg < 1.5) { float ph = fract(uTime / 6. + vFace.z * .07); blink = 1. - .92 * smoothstep(.92, .94, ph) * (1. - smoothstep(.96, .98, ph)); }
+        float er = mix(.105, .19, on);
+        float ex = .34 + vFace.z * .02;
+        vec2 e1 = p - (vec2(-ex, -.16) + lk * .11), e2 = p - (vec2(ex, -.16) + lk * .11);
+        float de = min(length(vec2(e1.x, e1.y / blink)), length(vec2(e2.x, e2.y / blink))) - er;
+        float m = cov(de, aa);
+        if (on > .5) fc = vec3(209., 38., 62.) / 255.;
+        float mt = ft; if (on > .5) mt = 4.;
+        float dm = 1.;
+        if (mt < 1.5) { vec2 q = vec2(pm.x / .34, (pm.y - .04) / .32); dm = max((abs(length(q) - 1.) - .2) * .33, -(pm.y - .04)); }
+        else if (mt < 2.5) { dm = sdSeg(pm, vec2(-.25, .24), vec2(.25, .24)) - .035; }
+        else if (mt < 3.5) { dm = abs(length(pm - vec2(0., .22)) - .14) - .035; }
+        else { vec2 q = vec2(pm.x / .28, (pm.y - .08) / .30); dm = max((length(q) - 1.) * .28, -(pm.y - .08)); }
+        m = max(m, cov(dm, aa));
+        col = mix(col, fc, m);
+      }
+      float k = .9 * edge * vE;
+      gl_FragColor = vec4(mix(vec3(1.), col, k), 1.);   // se multiplica con el fondo: el blanco es neutro
+    }`;
+
+  const material = new THREE.ShaderMaterial({
+    vertexShader: VERT, fragmentShader: FRAG,
+    uniforms: { uTime: { value: 0 }, uMotion: { value: REDUCIDO ? 0 : 1 }, uTilt: { value: new THREE.Vector2(0, 0) }, uCenter: { value: new THREE.Vector2(0, 0) }, uF: { value: 1600 }, uPtr: { value: new THREE.Vector2(0, 0) }, uPtrOn: { value: 0 } },
+    transparent: true, depthTest: false, depthWrite: false, side: THREE.DoubleSide,
+    blending: THREE.CustomBlending, blendEquation: THREE.AddEquation, blendSrc: THREE.DstColorFactor, blendDst: THREE.ZeroFactor
+  });
+
+  let clock0 = 0, retardoBase = 2.0, arranque = window.__arranque ?? null;   // línea de tiempo de la secuencia de entrada
+  let mesh = null, items = [], hAttr = null, aAttr = null, hovered = -1, t0 = performance.now(), visible = true, W = 1, H = 1;
+  let CX = 0, CY = 0;                                  // centro de la nube (eje de la rotación 3D)
+  const tilt = { x: 0, y: 0 }, tiltObj = { x: 0, y: 0 };
+  const PROF = 170, F = 1600;
+  // Misma proyección del shader (en reposo, sin la entrada) para saber dónde está cada círculo en pantalla
+  function proj(it) {
+    const zr = (it.z - .5) * PROF, x = it.x - CX, y = it.y - CY;
+    const cy = Math.cos(tilt.y), sy = Math.sin(tilt.y), cx = Math.cos(tilt.x), sx = Math.sin(tilt.x);
+    const x1 = x * cy + zr * sy, z1 = -x * sy + zr * cy, y2 = y * cx - z1 * sx, z2 = y * sx + z1 * cx;
+    const k = (F / (F - z2)) / (F / (F - zr));
+    return { x: CX + x1 * k, y: CY + y2 * k, r: it.r * k };
+  }
+
+  function disponer(W, H) {
+    const u = Math.min(W, 1.1 * H);
+    const d = disenadora ? { left: disenadora.offsetLeft, top: disenadora.offsetTop, width: disenadora.offsetWidth, height: disenadora.offsetHeight } : null;
+    const T = d ? [d.left + d.width * .65, d.top + d.height * .10] : [.296 * W, .591 * H];
+    // Burbuja de diálogo (artboard 3): óvalo con colita, desplazada para que la punta caiga en T
+    const sx = T[0] - .296 * W, sy = T[1] - .591 * H;
+    const cx = .306 * W + sx, cy = .279 * H + sy, rx = .229 * W, ry = .254 * H;
+    const TailL = [[.526, .292], [.562, .292], [.588, .296], [.591, .305]].map(([a, b]) => [a * H + sy, b * W + sx]);
+    const TailR = [[.526, .352], [.546, .337], [.573, .319], [.591, .305]].map(([a, b]) => [a * H + sy, b * W + sx]);
+    const dentro = (x, y) => (((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 <= 1) || (y >= TailL[0][0] && y <= T[1] && x >= interp(TailL, y) && x <= interp(TailR, y));
+    const cabe = (x, y, r) => { if (!dentro(x, y)) return false; for (let i = 0; i < 10; i++) { const a = i / 10 * 6.2831853; if (!dentro(x + Math.cos(a) * r * .95, y + Math.sin(a) * r * .95)) return false; } return true; };
+    const puestos = [];
+    for (const escala of [1, .72, .52, .34]) {
+      for (let t = 0; t < 2600; t++) {
+        const x = R(cx - rx, cx + rx), y = R(cy - ry, T[1]);
+        const dPunta = Math.hypot(x - T[0], y - T[1]);
+        const r = Math.min(Math.max(.011 * u, .055 * u * R(.45, 1) * escala), Math.max(.011 * u, .22 * dPunta));
+        if (!cabe(x, y, r)) continue;
+        if (puestos.some(q => Math.hypot(x - q.x, y - q.y) < (r + q.r) * .72)) continue;
+        puestos.push({ x, y, r });
+      }
+    }
+    puestos.sort((a, b) => a.y - b.y);
+    return { puestos, cx, cy };
+  }
+
+  function construir(puestos) {
+    const n = puestos.length;
+    const rMin = Math.min(...puestos.map(p => p.r)), rMax = Math.max(...puestos.map(p => p.r));
+    const A = { z: new Float32Array(n), pos: new Float32Array(n * 2), r: new Float32Array(n), col: new Float32Array(n * 3), face: new Float32Array(n * 4), anim: new Float32Array(n * 4), off: new Float32Array(n * 2), hov: new Float32Array(n), id: new Float32Array(n) };
+    const ids = Object.keys(PALETA);
+    items = puestos.map((p, k) => {
+      const nombre = elegirColor(), c = PALETA[nombre];
+      const punto = p.r >= 14 && Math.random() < .15;
+      const cara = !punto && p.r >= 11;
+      A.pos.set([p.x, p.y], k * 2); A.r[k] = p.r; A.col.set([c[0] / 255, c[1] / 255, c[2] / 255], k * 3);
+      A.id[k] = ids.indexOf(nombre);
+      const tipo = [1, 1, 2, 3, 4, 1, 4, 2][Math.floor(Math.random() * 8)];
+      A.face.set([cara ? tipo : 0, punto ? 1 : 0, [-5, -3, 0, 0, 3, 5][Math.floor(Math.random() * 6)], R(-14, 14) * Math.PI / 180], k * 4);
+      const retardo = REDUCIDO ? 0 : retardoBase + (n - 1 - k) / n * 1.2 + Math.random() * .12;   // de abajo hacia arriba
+      A.anim.set([retardo, (!REDUCIDO && Math.random() < .35) ? R(5, 10) : 0, R(0, 6.28), 0], k * 4);
+      A.off.set([R(-5, 5), R(-4, 6)], k * 2);
+      const z = Math.min(1, Math.max(0, (p.r - rMin) / (rMax - rMin + 1e-6) * .8 + .1 + R(-.1, .1)));
+      A.z[k] = z;
+      return { x: p.x, y: p.y, r: p.r, cara, egg: 0, z };
+    });
+    // Easter egg: tres caritas grandes y separadas, que parpadean; al tocarlas pasa algo
+    const cand = items.map((it, i) => i).filter(i => items[i].cara && items[i].r * 2 >= 34 && items[i].x - items[i].r > W * .01 && items[i].x + items[i].r < W * .99).sort(() => Math.random() - .5);
+    const elegidas = [];
+    cand.forEach(i => { if (elegidas.length < 3 && elegidas.every(j => Math.hypot(items[i].x - items[j].x, items[i].y - items[j].y) > .15 * W)) elegidas.push(i); });
+    elegidas.forEach(i => { items[i].egg = 1; A.anim[i * 4 + 3] = 1; });
+    encontradas = 0;
+
+    const base = new THREE.PlaneGeometry(2, 2);
+    const g = new THREE.InstancedBufferGeometry();
+    g.index = base.index; g.setAttribute('position', base.attributes.position);
+    g.setAttribute('iPos', new THREE.InstancedBufferAttribute(A.pos, 2));
+    g.setAttribute('iR', new THREE.InstancedBufferAttribute(A.r, 1));
+    g.setAttribute('iZ', new THREE.InstancedBufferAttribute(A.z, 1));
+    g.setAttribute('iColor', new THREE.InstancedBufferAttribute(A.col, 3));
+    g.setAttribute('iFace', new THREE.InstancedBufferAttribute(A.face, 4));
+    aAttr = new THREE.InstancedBufferAttribute(A.anim, 4);
+    g.setAttribute('iAnim', aAttr);
+    g.setAttribute('iOff', new THREE.InstancedBufferAttribute(A.off, 2));
+    hAttr = new THREE.InstancedBufferAttribute(A.hov, 1);
+    g.setAttribute('iHover', hAttr);
+    g.setAttribute('iColId', new THREE.InstancedBufferAttribute(A.id, 1));
+    g.instanceCount = n;
+    if (mesh) { scene.remove(mesh); mesh.geometry.dispose(); }
+    mesh = new THREE.Mesh(g, material);
+    mesh.frustumCulled = false;
+    scene.add(mesh);
+  }
+
+  let encontradas = 0;
+  function mensaje(i) {
+    const it = proj(items[i]), texto = MENSAJES[Math.min(encontradas++, 2)];
+    const m = document.createElement('div');
+    m.className = 'egg-msg'; m.textContent = texto;
+    m.style.left = Math.min(Math.max(it.x, 120), W - 120) + 'px';
+    m.style.top = Math.max(it.y - it.r - 8, 40) + 'px';
+    wrap.appendChild(m); setTimeout(() => m.remove(), 3200);
+    if (REDUCIDO) return;
+    for (let k = 0; k < 10; k++) {
+      const c = document.createElement('i'), a = k / 10 * 6.2831853 + R(-.3, .3), dd = R(40, 90);
+      c.className = 'chispa';
+      c.style.cssText = 'left:' + it.x + 'px;top:' + it.y + 'px;--tx:' + (Math.cos(a) * dd).toFixed(0) + 'px;--ty:' + (Math.sin(a) * dd).toFixed(0) + 'px;background:' + ['#FFB700', '#FF495C', '#6CD0CD', '#D1263E'][k % 4];
+      wrap.appendChild(c); setTimeout(() => c.remove(), 900);
+    }
+  }
+
+  function generar() {
+    if (MOVIL()) { canvas.style.display = 'none'; if (mesh) { scene.remove(mesh); mesh = null; } return; }   // en móvil no hay globo
+    canvas.style.display = 'block';
+    const r = wrap.getBoundingClientRect();
+    W = r.width; H = r.height;
+    if (!W || !H) return;
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.setSize(W, H, false);
+    camera.left = 0; camera.right = W; camera.top = 0; camera.bottom = H; camera.updateProjectionMatrix();
+    // Secuencia: diseñadora (izq → der) y textos (der → izq) se juntan al medio → pausa → nube (abajo → arriba).
+    // El reloj arranca cuando se quita la pantalla de carga (evento 'intro').
+    const tl = document.timeline.currentTime;
+    if (arranque === null) clock0 = tl + 1e7;                      // todavía cargando: la nube espera oculta
+    else if (tl - arranque > 8000) { clock0 = tl; retardoBase = .1; }   // regeneraciones posteriores (clic, resize): animación corta
+    else clock0 = arranque;
+    const d = disponer(W, H);
+    CX = d.cx; CY = d.cy;
+    material.uniforms.uCenter.value.set(CX, CY);
+    construir(d.puestos);
+  }
+
+  // ───────── Interacción: hover (crece) y clic en los huevos ─────────
+  function bajoCursor(e) {
+    const b = canvas.getBoundingClientRect(), x = e.clientX - b.left, y = e.clientY - b.top;
+    let mejor = -1, mr = 1e9;
+    items.forEach((it, i) => { const q = proj(it); const r = q.r * (1 + .14 * (hAttr.array[i] || 0)); if (Math.hypot(x - q.x, y - q.y) <= r && it.r < mr) { mejor = i; mr = it.r; } });
+    return mejor;
+  }
+  canvas.addEventListener('pointermove', e => { hovered = bajoCursor(e); canvas.style.cursor = hovered >= 0 && items[hovered].egg === 1 ? 'pointer' : 'default'; });
+  canvas.addEventListener('pointerleave', () => { hovered = -1; canvas.style.cursor = 'default'; });
+  // El cursor, en cualquier parte del hero, inclina la nube y hace que las caritas lo miren
+  addEventListener('pointermove', e => {
+    if (REDUCIDO || e.pointerType === 'touch') return;
+    const b = wrap.getBoundingClientRect();
+    const mx = Math.max(-1, Math.min(1, (e.clientX - b.left - b.width / 2) / (b.width / 2)));
+    const my = Math.max(-1, Math.min(1, (e.clientY - b.top - b.height / 2) / (b.height / 2)));
+    tiltObj.y = mx * .20; tiltObj.x = -my * .14;
+    material.uniforms.uPtr.value.set(e.clientX - b.left, e.clientY - b.top);
+    material.uniforms.uPtrOn.value = 1;
+  }, { passive: true });
+  document.addEventListener('pointerleave', () => { tiltObj.x = tiltObj.y = 0; material.uniforms.uPtrOn.value = 0; });
+  canvas.addEventListener('click', e => {
+    const i = bajoCursor(e);
+    if (i >= 0 && items[i].egg === 1) { items[i].egg = 2; aAttr.array[i * 4 + 3] = 2; aAttr.needsUpdate = true; mensaje(i); }
+  });
+
+  // ───────── Bucle de render ─────────
+  function bucle(ahora) {
+    requestAnimationFrame(bucle);
+    if (!mesh || !visible || document.hidden) return;
+    material.uniforms.uTime.value = (ahora - clock0) / 1000;
+    tilt.x += (tiltObj.x - tilt.x) * .07; tilt.y += (tiltObj.y - tilt.y) * .07;
+    material.uniforms.uTilt.value.set(tilt.x, tilt.y);
+    if (hAttr) {
+      let cambio = false;
+      for (let i = 0; i < items.length; i++) {
+        const objetivo = i === hovered ? 1 : 0, h = hAttr.array[i], n = h + (objetivo - h) * .2;
+        const v = Math.abs(n - objetivo) < .005 ? objetivo : n;
+        if (v !== h) { hAttr.array[i] = v; cambio = true; }
+      }
+      if (cambio) hAttr.needsUpdate = true;
+    }
+    renderer.render(scene, camera);
+  }
+  requestAnimationFrame(bucle);
+  new IntersectionObserver(es => { visible = es[0].isIntersecting; }).observe(wrap);
+
+  addEventListener('intro', () => { arranque = window.__arranque; clock0 = arranque; });
+  generar();
+  let tmr;
+  addEventListener('resize', () => { clearTimeout(tmr); tmr = setTimeout(generar, 250); });
+  addEventListener('load', generar);
+  if (disenadora) {
+    disenadora.addEventListener('click', generar);
+    new IntersectionObserver((es, o) => es.forEach(e => { if (e.isIntersecting) { disenadora.classList.add('visible'); o.disconnect(); } }), { threshold: .2 }).observe(disenadora);
+  }
+}
+
+  
+// ───────── Caritas entre las secciones (color plano; lo que se mueve es la carita) ─────────
+// Una segunda escena fija sobre la página (sin capturar clics): en el espacio de cada sección hay 2 o 3 caritas
+// de color plano. Los ojos y la boca se deslizan hacia el cursor, parpadean y sonríen más al acercarte.
+{
+  const REDUCIDO = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const R = (a, b) => a + Math.random() * (b - a);
+  const fc = document.createElement('canvas');
+  fc.className = 'caritas3d'; fc.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(fc);
+  const rr = new THREE.WebGLRenderer({ canvas: fc, alpha: true, antialias: true, powerPreference: 'low-power' });
+  rr.setClearColor(0x000000, 0);
+  const sc = new THREE.Scene();
+  const cam = new THREE.OrthographicCamera(-1, 1, 1, -1, -1000, 1000);   // 1 unidad = 1 px, y hacia arriba
+
+  const COLORES = ['#6CD0CD', '#FFB700', '#FF495C', '#FFDB7A', '#B6E8E6', '#FFA4AE'];
+  const tinta = new THREE.MeshBasicMaterial({ color: 0x1E252B });
+  const geoCuerpo = new THREE.CircleGeometry(1, 56);
+  const geoOjo = new THREE.CircleGeometry(.105, 20);
+  const geoSonrisa = new THREE.TorusGeometry(.30, .055, 8, 28, Math.PI);
+  const geoLinea = new THREE.CapsuleGeometry(.05, .34, 4, 8);
+  const geoAbierta = new THREE.CircleGeometry(.26, 24, Math.PI, Math.PI);
+  const geoO = new THREE.TorusGeometry(.12, .05, 8, 22);
+
+  function carita(color, tipo) {
+    const g = new THREE.Group();
+    g.add(new THREE.Mesh(geoCuerpo, new THREE.MeshBasicMaterial({ color })));
+    const rasgos = new THREE.Group(); rasgos.position.z = .5; g.add(rasgos);
+    const ojos = [-1, 1].map(lado => { const o = new THREE.Mesh(geoOjo, tinta); o.position.set(lado * .34, .20, 0); rasgos.add(o); return o; });
+    let boca;
+    if (tipo === 0) { boca = new THREE.Mesh(geoSonrisa, tinta); boca.rotation.z = Math.PI; boca.position.set(0, .02, 0); }
+    else if (tipo === 1) { boca = new THREE.Mesh(geoLinea, tinta); boca.rotation.z = Math.PI / 2; boca.position.set(0, -.20, 0); }
+    else if (tipo === 2) { boca = new THREE.Mesh(geoAbierta, tinta); boca.position.set(0, -.04, 0); }
+    else { boca = new THREE.Mesh(geoO, tinta); boca.position.set(0, -.22, 0); }
+    rasgos.add(boca);
+    sc.add(g);
+    return { g, rasgos, ojos, boca };
+  }
+
+  // 2 o 3 caritas por cada hueco entre secciones (al comienzo de cada sección, en su espacio superior)
+  const SECCIONES = ['#sobre-mi', '#skills', '#proyectos', '#contacto'];
+  const caras = [];
+  SECCIONES.forEach(sel => {
+    const sec = document.querySelector(sel); if (!sec) return;
+    const n = Math.random() < .5 ? 2 : 3;
+    const ranuras = n === 3 ? [.13, .5, .87] : [.22, .76];
+    const cols = COLORES.slice().sort(() => Math.random() - .5);
+    ranuras.forEach((fx, i) => {
+      const c = carita(cols[i], Math.floor(Math.random() * 4));
+      caras.push({ ...c, sec, fx: fx + R(-.04, .04), dy: R(30, 62), R: R(24, 34), sp: R(.8, 1.6), ph: R(0, 6.28), sc: 1, ox: 0, oy: 0, sonrisa: 1, nace: null, parp: performance.now() + R(2000, 6000), parpIni: -1e9 });
+    });
+  });
+
+  let W = innerWidth, H = innerHeight, hubo = false;
+  const ptr = { x: 0, y: 0, on: false };
+  function tam() {
+    W = innerWidth; H = innerHeight;
+    rr.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    rr.setSize(W, H, false);
+    cam.left = -W / 2; cam.right = W / 2; cam.top = H / 2; cam.bottom = -H / 2; cam.updateProjectionMatrix();
+  }
+  tam();
+  addEventListener('resize', tam);
+  addEventListener('pointermove', e => { if (e.pointerType === 'touch') return; ptr.x = e.clientX; ptr.y = e.clientY; ptr.on = true; }, { passive: true });
+  document.addEventListener('pointerleave', () => { ptr.on = false; });
+
+  function cuadro(ahora) {
+    requestAnimationFrame(cuadro);
+    if (document.hidden) return;
+    let alguna = false;
+    for (const f of caras) {
+      const sy = f.sec.getBoundingClientRect().top + f.dy, sx = f.fx * W;
+      const visible = sy > -70 && sy < H + 70;
+      f.g.visible = visible;
+      if (!visible) { f.nace = null; continue; }
+      alguna = true;
+      if (f.nace === null) f.nace = ahora;
+      const t = Math.min((ahora - f.nace) / 1000, 1);
+      const pop = REDUCIDO || t >= 1 ? 1 : 1 - Math.exp(-6 * t) * Math.cos(11 * t);        // aparece con rebote al llegar a la vista
+      const bob = REDUCIDO ? 0 : Math.sin(ahora / 1000 * f.sp + f.ph) * 5;
+      const dx = ptr.x - sx, dy = (sy + bob) - ptr.y, dist = Math.hypot(dx, dy) || 1;     // dy hacia arriba
+      const cerca = ptr.on && dist < f.R * 2.6;
+      f.sc += ((cerca ? 1.12 : 1) - f.sc) * .15;
+      f.g.position.set(sx - W / 2, H / 2 - (sy + bob), 0);
+      f.g.scale.setScalar(Math.max(f.R * pop * f.sc, .001));
+      // los rasgos se deslizan sobre el círculo hacia el cursor (el círculo queda plano y quieto)
+      const k = ptr.on && !REDUCIDO ? Math.min(1, dist / 260) : 0;
+      f.ox += (dx / dist * .30 * k - f.ox) * .14; f.oy += (dy / dist * .22 * k - f.oy) * .14;
+      f.rasgos.position.set(f.ox, f.oy, .5);
+      f.rasgos.rotation.z = -f.ox * .28;
+      f.ojos.forEach((o, i) => o.position.set((i ? 1 : -1) * .34 + f.ox * .35, .20 + f.oy * .35, 0));   // los ojos miran un poco más
+      f.sonrisa += ((cerca ? 1.28 : 1) - f.sonrisa) * .15;
+      f.boca.scale.set(f.sonrisa, f.sonrisa, 1);                                            // sonríe más al acercarte
+      // parpadeo
+      if (!REDUCIDO && ahora > f.parp) { f.parpIni = ahora; f.parp = ahora + R(3000, 7000); }
+      const bt = (ahora - f.parpIni) / 160, ey = bt >= 0 && bt < 1 ? 1 - .9 * Math.sin(bt * Math.PI) : 1;
+      f.ojos.forEach(o => { o.scale.y = ey; });
+    }
+    if (alguna) { rr.render(sc, cam); hubo = true; }
+    else if (hubo) { rr.clear(); hubo = false; }
+  }
+  requestAnimationFrame(cuadro);
+}
+  </script>
+<script>
+// Pantalla en blanco con un spinner hasta que cargan fuentes e imágenes; después arranca la secuencia de entrada.
+(function () {
+  var hecho = false;
+  function listo() {
+    if (hecho) return; hecho = true;
+    requestAnimationFrame(function () { requestAnimationFrame(function () {
+      window.__arranque = document.timeline.currentTime;
+      document.body.classList.remove('cargando');
+      window.dispatchEvent(new Event('intro'));
+      setTimeout(function () { var c = document.querySelector('.cargador'); if (c) c.remove(); }, 800);
+    }); });
+  }
+  var carga = new Promise(function (r) { if (document.readyState === 'complete') r(); else addEventListener('load', r, { once: true }); });
+  Promise.all([carga, document.fonts ? document.fonts.ready : 0]).then(listo, listo);
+  setTimeout(listo, 5000);   // por si algo tarda demasiado
+})();
+</script>
+</body>
+</html>

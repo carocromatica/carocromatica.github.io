@@ -369,3 +369,44 @@ body.v2 .saludo .hl {
 
 /* Frases destacadas de la bio: solo negrita (sin subrayado ni marcador, para que no parezcan links) */
 body.v2 .about-text .destacado { font-weight: 700; }
+
+/* indexsparkthree: la nube se dibuja en un canvas WebGL (three.js) */
+.nube-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+@media (max-width: 52rem) { .nube-canvas { display: none; } }
+
+
+/* ========== indexsparkthree: entrada animada de los textos y del navbar ========== */
+/* Llegan "desde la cámara", como los círculos: más grandes y desenfocados, y se asientan con un pequeño rebote.
+   Van escalonados para acompañar el armado de la nube. fill-mode "backwards" para no pisar los hover. */
+@keyframes disenadora-llega {
+  0%   { opacity: 0; transform: translateX(-130px); }
+  55%  { opacity: 1; }
+  72%  { transform: translateX(8px); }
+  100% { opacity: 1; transform: none; }
+}
+
+/* El bloque de texto se mueve igual que la diseñadora, pero de derecha a izquierda, y al mismo tiempo */
+@keyframes bloque-llega {
+  0%   { opacity: 0; transform: translateX(130px); }
+  55%  { opacity: 1; }
+  72%  { transform: translateX(-8px); }
+  100% { opacity: 1; transform: none; }
+}
+body.v3 .hero-texto, body.v3 .nav ul, body.v3 .nav-logo { animation: bloque-llega 1s cubic-bezier(.22, 1, .36, 1) backwards; }
+/* La diseñadora abre la secuencia: entra de izquierda a derecha */
+body.v3 .disenadora-hero, body.v3 .disenadora.visible { opacity: 1; animation: disenadora-llega 1s cubic-bezier(.22, 1, .36, 1) backwards; }
+@media (prefers-reduced-motion: reduce) {
+  body.v3 .hero-texto, body.v3 .nav ul, body.v3 .nav-logo, body.v3 .disenadora-hero, body.v3 .disenadora.visible { animation: none; }
+}
+
+/* indexsparkthree: caritas 3D entre secciones (canvas fijo, no captura clics) */
+.caritas3d { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 4; }
+
+/* Pantalla de carga: blanco liso con un spinner pequeño; las animaciones de entrada esperan a que se quite */
+.cargador { position: fixed; inset: 0; z-index: 9999; display: grid; place-items: center; background: #fff; transition: opacity .45s ease, visibility .45s; }
+.cargador span { width: 30px; height: 30px; border-radius: 50%; border: 3px solid #E6EAEC; border-top-color: var(--teal); animation: gira .8s linear infinite; }
+body:not(.cargando) .cargador { opacity: 0; visibility: hidden; }
+@keyframes gira { to { transform: rotate(360deg); } }
+body.cargando { overflow: hidden; }
+body.v3.cargando :is(.nav-logo, .nav ul, .hero-texto, .disenadora-hero) { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) { .cargador span { animation-duration: 2s; } }
