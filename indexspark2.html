@@ -4,17 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carolina Torres (Carocromatica) — Product Designer y Front-End Developer</title>
-  <meta name="description" content="Carolina Torres (Carocromatica), Product Designer y Front-End Developer. Construyo experiencias digitales pensadas para las personas.">
+  <meta name="description" content="Carolina Torres (Carocromatica), Product Designer y Front-End Developer. Construyo experiencias digitales pensando en las personas.">
   <link rel="icon" href="./svg/logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Schibsted+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;700&family=Atkinson+Hyperlegible+Next:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   <link rel="stylesheet" href="indexspark.css">
 </head>
 <body class="v2">
   <header class="nav">
     <nav class="wrap" aria-label="Principal">
+      <a class="nav-logo" href="#top" aria-label="Carocromatica, inicio"><img src="spark/marca.svg" alt="" width="52" height="52"></a>
       <ul>
         <li><a href="#sobre-mi">Sobre mí</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
@@ -38,7 +39,7 @@
         <div>
           <p class="saludo">Hola, soy <span class="hl">Caro</span>.</p>
           <h1 id="hero-t">Product Designer y Front-End Developer.</h1>
-          <p class="hero-sub">Construyo experiencias digitales pensadas para las personas.</p>
+          <p class="hero-sub">Construyo experiencias digitales pensando en las personas.</p>
           <div class="cta">
             <a class="btn" href="#proyectos">Ver proyectos <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
             <a class="btn ghost" href="./cv/Carolina%20torres%20cv%202018.pdf">Descargar CV</a>
@@ -49,11 +50,19 @@
 
     <section class="sec" id="sobre-mi" aria-labelledby="sobre-t">
       <div class="wrap about-grid">
-        <div class="about-text">
+        <div class="about-keys">
           <h2 id="sobre-t">Sobre <span class="hl">mí</span></h2>
-          <p class="about-lead">Soy colaborativa, proactiva y creativa.</p>
-          <p>Hola, me llamo Carolina Torres, aunque me puedes encontrar como Carocromatica. Soy Desarrolladora Front-end y Diseñadora Gráfica de profesión. Entusiasta de la tecnología, las comunicaciones y el diseño visual. Mi foco es desarrollar soluciones óptimas e innovadoras en aplicaciones y experiencias digitales.</p>
-          <p>Estoy en un constante proceso de aprendizaje; la investigación y la experimentación son clave para seguir creciendo profesionalmente.</p>
+          <ul class="keywords" aria-label="Especialidades">
+            <li>Investigación UX</li>
+            <li>Diseño de servicios</li>
+            <li>Diseño UX/UI</li>
+            <li>Desarrollo front-end</li>
+          </ul>
+        </div>
+        <div class="about-text">
+          <p>Soy Carolina Torres Durán, diseñadora de productos digitales en Chile. Me gusta entender cómo trabaja la gente de verdad, con sus planillas, sus atajos y esas tareas que alguien termina haciendo a mano para que todo funcione. Ahí suelo encontrar las mejores pistas para diseñar.</p>
+          <p>Combino investigación, diseño de servicios y front-end. A veces una buena solución empieza por ordenar quién hace qué. Otras veces, por construir una primera versión en código y probar cómo se usa. Mi parte favorita es cuando algo llega a producción y le hace el día un poco más fácil a alguien.</p>
+          <p>También soy docente en Duoc UC. Ahí me formé y hoy vuelvo a sus aulas como profe, donde comparto lo que he aprendido sobre diseño de productos digitales y desarrollo web con estudiantes de Ingeniería en Marketing.</p>
           <div class="links">
             <a href="./cv/Carolina%20torres%20cv%202018.pdf"><i class="far fa-file-alt" aria-hidden="true"></i> Descargar CV</a>
             <a href="https://github.com/carocromatica" target="_blank" rel="noopener"><i class="fab fa-github-alt" aria-hidden="true"></i> GitHub</a>
@@ -215,6 +224,8 @@
       }
 
       function generar() {
+        // En móvil no hay globo: ni se genera (ahorra trabajo), solo queda la diseñadora
+        if (matchMedia('(max-width: 52rem)').matches) { nube.replaceChildren(); return; }
         const w = wrap.getBoundingClientRect();
         const W = w.width, H = w.height;
         if (!W || !H) return;
