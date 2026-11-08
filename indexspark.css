@@ -7,7 +7,7 @@
   --coral-d: #D1263E;
   --orange: #FB8C00;
   --ink: #1E252B;
-  --paper: #F4F4F4;
+  --paper: #FFFFFF;
   --gray: #E0E0E0;
   --teal-l: #B6E8E6;
   --amber-l: #FFDB7A;
@@ -26,9 +26,7 @@ html { scroll-padding-top: calc(var(--nav-h) + .5rem); scrollbar-color: var(--co
 
 body {
   margin: 0;
-  background-color: var(--paper);
-  /* grano de papel muy tenue, como el collage de referencia */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .12 0 0 0 0 .14 0 0 0 0 .17 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background: #fff;
   color: var(--ink);
   font-family: var(--font-body);
   font-size: 1.125rem;
@@ -306,3 +304,7 @@ h1, h2, h3 {
 @media (min-width: 52.01rem) {
   .hero { margin-top: calc(var(--nav-h) * -1); height: 100svh; min-height: 32rem; }
 }
+
+/* Blob amarillo pegado al borde derecho: nace en el hero y baja hasta "Sobre mí" */
+.blob-der { position: absolute; z-index: 0; right: 0; top: 87%; width: 13.9%; height: 94.5%; pointer-events: none; }
+@media (max-width: 64rem) { .blob-der { display: none; } }

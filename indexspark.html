@@ -25,6 +25,7 @@
 
   <main id="top">
     <section class="hero" aria-labelledby="hero-t">
+      <svg class="blob-der" aria-hidden="true" viewBox="0 0 157 600" preserveAspectRatio="none"><path fill="var(--amber)" d="M157 0C120 4 85 40 72 100C62 160 100 230 118 300C130 350 100 420 55 470C20 505 -5 540 8 575C20 600 90 610 157 585Z"/></svg>
       <div class="nube-wrap">
           <p class="sr-only">Ilustración: una nube de pensamiento formada por círculos de colores, cada uno es un usuario, que sale de la cabeza de la diseñadora.</p>
           <ul class="nube" aria-hidden="true"></ul>
@@ -176,7 +177,7 @@
       const disenadora = document.getElementById('disenadora');
       if (!nube || !wrap) return;
       const R = (a, b) => a + Math.random() * (b - a);
-      const COLORES = [['teal', 18], ['amber', 18], ['coral', 17], ['coral-d', 8], ['teal-l', 9], ['amber-l', 8], ['coral-l', 6], ['paper', 4]];
+      const COLORES = [['teal', 18], ['amber', 18], ['coral', 17], ['coral-d', 8], ['teal-l', 9], ['amber-l', 8], ['coral-l', 6]];
       const REDUCIDO = matchMedia('(prefers-reduced-motion: reduce)').matches;
       let dim = { W: 1, H: 1 };
       let encontradas = 0;
@@ -224,20 +225,23 @@
         const T = d ? [d.left + d.width * .5 - w.left, d.top + d.height * .04 - w.top] : [.275 * W, H * 1.3];
 
         // 1) Silueta: la forma del embudo que dibujaste en tu artboard (puntos medidos como fracciones del hero).
-        //    Toca el borde superior y el izquierdo, y se cierra en una punta justo sobre la cabeza de la diseñadora.
+        //    Toca el borde superior y el izquierdo, la derecha termina en punta arriba y el cuello baja hasta
+        //    una punta justo sobre la cabeza de la diseñadora.
         const yTip = T[1];                              // la punta cae sobre la cabeza de la diseñadora
-        const Hs = yTip / 1.156;                        // en tu artboard la punta está a 1.156 veces el alto del hero
+        const Hs = yTip / 1.17;                         // en tu artboard la punta está a 1.17 veces el alto del hero
         const apexX = Math.min(Math.max(T[0], .12 * W), .5 * W);
-        const shift = apexX - .255 * W;                 // la punta apunta justo a la diseñadora
+        const shift = apexX - .252 * W;                 // la punta apunta justo a la diseñadora
+        const tipX = .632 * W;                          // punta superior derecha
         // borde derecho [y, x]
-        const Rp = [[0, .617], [.05, .600], [.092, .575], [.144, .520], [.193, .460], [.264, .400], [.348, .354], [.43, .321], [.515, .298], [.6, .285], [.693, .279], [.787, .277], [.891, .276], [1.0, .274], [1.09, .265], [1.156, .255]].map(([a, b]) => [a * Hs, b * W]);
-        // borde izquierdo [y, x]: vertical (sangra por el borde) hasta el 66% y luego baja en curva hasta la punta
-        const Lp = [[.661, -.02], [.719, .018], [.776, .048], [.834, .083], [.886, .124], [.933, .165], [.98, .195], [1.027, .218], [1.08, .236], [1.12, .248], [1.156, .255]].map(([a, b]) => [a * Hs, b * W]);
+        const Rp = [[0, .632], [.068, .544], [.146, .455], [.225, .385], [.312, .332], [.406, .297], [.509, .275], [.603, .268], [.713, .270], [.824, .281], [.934, .292], [1.012, .300], [1.06, .298], [1.115, .288], [1.151, .270], [1.17, .252]].map(([a, b]) => [a * Hs, b * W]);
+        // borde inferior de la masa [x, y]: sangra por la izquierda, hace un arco suave y cae al cuello
+        const Bp = [[-.03, .784], [0, .784], [.04, .761], [.085, .756], [.129, .764], [.182, .80], [.226, .871], [.252, .965], [.259, 1.06]].map(([a, b]) => [a * W, b * Hs]);
         const f = y => Math.pow(Math.max(y, 0) / yTip, 2);
+        const yB = x => x >= Bp[Bp.length - 1][0] ? yTip : interp(Bp, x);
         const dentro = (x, y) => {
           if (y < 0 || y > yTip) return false;
           const xs = x - shift * f(y);
-          return xs <= interp(Rp, y) && (y < Lp[0][0] || xs >= interp(Lp, y));
+          return y <= yB(xs) && xs <= interp(Rp, y);
         };
         const cabe = (x, y, r) => {
           if (!dentro(x, y)) return false;
@@ -255,14 +259,26 @@
           for (let t = 0; t < 2600; t++) {
             const y = R(0, yTip);
             const x = R(-.03 * W, .64 * W);
-            // cerca de la esquina superior derecha los círculos se achican, para que el remate termine en punta filosa
-            const dPunta = Math.hypot(x - .617 * W, y);
-            const r = Math.min(Math.max(.011 * u, rMax(y) * R(.5, 1) * escala), Math.max(.011 * u, .22 * dPunta));
+            // cerca de las dos puntas los círculos se achican, para que terminen filosas
+            const dArriba = Math.hypot(x - tipX, y), dAbajo = Math.hypot(x - apexX, y - yTip);
+            const r = Math.min(Math.max(.011 * u, rMax(y) * R(.5, 1) * escala), Math.max(.011 * u, .22 * Math.min(dArriba, dAbajo)));
             if (!cabe(x, y, r)) continue;
             if (puestos.some(q => Math.hypot(x - q.x, y - q.y) < (r + q.r) * .72)) continue;
             puestos.push({ x, y, r });
           }
         }
+
+        // 2b) En las puntas, donde ya no caben círculos, puntitos de 2px
+        const enPunta = (x, y) => Math.hypot(x - tipX, y) < .16 * W || y > .9 * yTip;
+        const puntos = [];
+        for (let t = 0; t < 2400 && puntos.length < 320; t++) {
+          const y = R(0, yTip), x = R(-.03 * W, .66 * W);
+          if (!enPunta(x, y) || !dentro(x, y)) continue;
+          if (puestos.some(q => Math.hypot(x - q.x, y - q.y) < q.r + 3)) continue;
+          if (puntos.some(q => Math.hypot(x - q.x, y - q.y) < 6)) continue;
+          puntos.push({ x, y, r: 1 });
+        }
+        puntos.forEach(q => puestos.push(q));
 
         // 3) A pintar: se arma de arriba hacia abajo
         puestos.sort((a, b) => a.y - b.y);
