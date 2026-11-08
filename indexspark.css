@@ -308,3 +308,16 @@ h1, h2, h3 {
 /* Blob amarillo pegado al borde derecho: nace en el hero y baja hasta "Sobre mí" */
 .blob-der { position: absolute; z-index: 0; right: 0; top: 87%; width: 13.9%; height: 94.5%; pointer-events: none; }
 @media (max-width: 64rem) { .blob-der { display: none; } }
+
+
+/* ========== indexspark2: la diseñadora vive en el hero y las caritas salen por detrás de ella ========== */
+.disenadora-hero { position: absolute; z-index: 2000; left: 18.3%; bottom: 7.5%; width: 17.4%; opacity: 1; order: 0; justify-self: auto; margin: 0; }
+body.v2 .about-grid { grid-template-columns: minmax(0, 1fr); }
+body.v2 .about-text { max-width: 44rem; }
+@media (max-width: 52rem) {
+  .disenadora-hero { left: 33%; bottom: 3%; width: 34%; }
+}
+
+/* El bloque de texto no tapa los clics sobre la nube ni sobre la diseñadora */
+.hero-grid { pointer-events: none; }
+.hero-grid > div { pointer-events: auto; }
