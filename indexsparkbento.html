@@ -599,6 +599,7 @@ fig.addEventListener('click', () => {
   despierta = true;
   clearTimeout(timerGuion); clearTimeout(timerZ); clearTimeout(timerSorpresa);
   document.body.classList.remove('dormida');
+  fig.classList.add('sin-circulo');                     // el círculo gris se cierra hacia adentro cuando Caro despierta
   const heroEl = document.querySelector('.hero');
   if (!primera) { revelada = false; generar(false); heroEl.classList.remove('con-nube'); }   // en clics siguientes la nube anterior se va y vuelve a armarse
   const nubeAparece = () => { revelada = true; generar(true); heroEl.classList.add('con-nube'); };   // la nube y los puntos flotantes aparecen juntos, cuando llega el cuadro 17

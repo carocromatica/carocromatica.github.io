@@ -463,3 +463,11 @@ body.dormida .hero .adornos-hero { opacity: 0; transition: none; }
 /* Los puntos del hero aparecen a la vez que la nube (cuando Caro llega al último cuadro), no antes */
 .hero .adornos-hero { opacity: 0; transition: opacity .6s ease; }
 .hero.con-nube .adornos-hero { opacity: 1; transition: opacity 1.2s ease; }
+
+/* Caro dentro de un círculo gris clarito */
+body.bento .disenadora-hero::before { content: ''; position: absolute; left: 50%; top: 52%; width: 124%; aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%; background: #EEF0F2; z-index: -1; pointer-events: none; }
+
+/* Al hacer clic, el círculo gris se cierra con un zoom hacia adentro y desaparece */
+body.bento .disenadora-hero::before { transition: transform .75s cubic-bezier(.65, 0, .35, 1), opacity .2s ease .6s; }
+body.bento .disenadora-hero.sin-circulo::before { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+@media (prefers-reduced-motion: reduce) { body.bento .disenadora-hero::before { transition: none; } }
