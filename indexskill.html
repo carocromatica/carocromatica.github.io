@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carocromatica — Desarrolladora Front-end y Diseñadora Gráfica</title>
+  <meta name="description" content="Portafolio de Carolina Torres (Carocromatica): desarrollo front-end y diseño gráfico.">
+  <link rel="icon" href="./svg/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Schibsted+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+  <style>
+    :root {
+      --teal: #6CD0CD;
+      --amber: #FFB700;
+      --coral: #FF495C;
+      --ink: #1E252B;
+      --paper: #F4F6F5;
+
+      --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+      --font-body: "Schibsted Grotesk", system-ui, sans-serif;
+
+      --gutter: clamp(1.25rem, 5vw, 4rem);
+      --band: clamp(4.5rem, 10vw, 8rem);
+      --ease-out: cubic-bezier(.16, 1, .3, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 1rem;
+      scrollbar-color: var(--coral) var(--paper);
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 1.125rem;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: clip;
+    }
+
+    ::selection { background: var(--amber); color: var(--ink); }
+
+    img { display: block; max-width: 100%; height: auto; }
+
+    a { color: inherit; text-underline-offset: .22em; text-decoration-thickness: 2px; }
+
+    a:focus-visible, .btn:focus-visible {
+      outline: 3px solid currentColor;
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      line-height: .98;
+      letter-spacing: -.03em;
+      margin: 0;
+      text-wrap: balance;
+    }
+
+    h2 { font-size: clamp(2.5rem, 7vw, 5rem); }
+    h3 { font-size: clamp(2rem, 4.6vw, 3.5rem); }
+
+    p { margin: 0; text-wrap: pretty; }
+
+    .wrap { width: 100%; max-width: 76rem; margin-inline: auto; padding-inline: var(--gutter); }
+
+    .visually-hidden {
+      position: absolute; width: 1px; height: 1px; overflow: hidden;
+      clip-path: inset(50%); white-space: nowrap;
+    }
+
+    /* ───────── Nav ───────── */
+    .site-nav .wrap {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-block: 1.25rem;
+    }
+
+    .site-nav img { width: 44px; height: 44px; background: var(--ink); border-radius: 50%; }
+
+    .site-nav ul { display: flex; gap: clamp(1rem, 3vw, 2.25rem); list-style: none; margin: 0; padding: 0; }
+
+    .site-nav a {
+      font-weight: 600; font-size: 1rem; text-decoration: none;
+      padding-block: .5rem; display: inline-block;
+      background: linear-gradient(currentColor, currentColor) 0 100% / 0 3px no-repeat;
+      transition: background-size .35s var(--ease-out);
+    }
+    .site-nav a:hover { background-size: 100% 3px; }
+
+    /* ───────── Hero ───────── */
+    .hero {
+      min-height: calc(100svh - 82px);
+      display: grid;
+      grid-template-rows: 1fr auto;
+      padding-bottom: 2rem;
+    }
+
+    .hero-main {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: center;
+      gap: 2rem;
+      padding-block: 1rem 2.5rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.25rem, 9.5vw, 6rem);
+      font-variation-settings: "opsz" 96;
+    }
+
+    .hero-role {
+      margin-top: 1.5rem;
+      max-width: 28ch;
+      font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+      line-height: 1.3;
+      font-weight: 600;
+    }
+
+    .hero-cta { margin-top: 2rem; display: flex; gap: .75rem; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: .55rem;
+      font: 600 1rem/1 var(--font-body);
+      padding: .95rem 1.35rem;
+      border-radius: 999px;
+      border: 2px solid var(--ink);
+      background: var(--ink);
+      color: var(--paper);
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .3s var(--ease-out), background-color .2s, color .2s;
+    }
+    .btn:hover { transform: translateY(-3px); }
+    .btn.ghost { background: transparent; color: inherit; border-color: currentColor; }
+    .btn.ghost:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+    /* Overprint art: three inks, misregistered, then settling into place */
+    .overprint {
+      position: relative;
+      width: min(100%, 34rem);
+      aspect-ratio: 1;
+      margin-inline: auto;
+      isolation: isolate;
+    }
+
+    .pigment {
+      position: absolute;
+      width: 66%; aspect-ratio: 1;
+      mix-blend-mode: multiply;
+      animation: register 1.6s var(--ease-out) both;
+    }
+    .pigment.t { background: var(--teal);  border-radius: 58% 42% 63% 37% / 46% 57% 43% 54%; rotate: -12deg; left: 2%;  top: 4%;  --dx: -26%; --dy: -18%; }
+    .pigment.a { background: var(--amber); border-radius: 41% 59% 48% 52% / 58% 40% 60% 42%; rotate: 20deg; left: 32%; top: 10%; --dx: 30%;  --dy: -14%; animation-delay: .12s; }
+    .pigment.c { background: var(--coral); border-radius: 62% 38% 45% 55% / 41% 62% 38% 59%; rotate: 8deg; left: 14%; top: 32%; --dx: -6%;  --dy: 30%;  animation-delay: .24s; }
+
+    @keyframes register {
+      from { transform: translate(var(--dx), var(--dy)) scale(.82); opacity: 0; }
+      to   { transform: none; opacity: 1; }
+    }
+
+    /* Work leads: strip of projects under the fold of the hero */
+    .strip {
+      list-style: none; margin: 0; padding: 0;
+      display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem;
+    }
+
+    .strip a { display: block; text-decoration: none; }
+
+    .strip img {
+      width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 1.6rem 3.2rem 1.6rem 3.2rem;
+      transition: transform .5s var(--ease-out);
+    }
+    .strip a:hover img { transform: translateY(-6px); }
+
+    .strip span {
+      display: block; margin-top: .65rem;
+      font-weight: 600; font-size: 1rem;
+    }
+
+    /* ───────── Bands ───────── */
+    :root {
+      --wave1: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 60V32C140 4 260 6 380 26S620 58 780 34 1060 -2 1200 22s180 26 240 6V60Z'/%3E%3C/svg%3E");
+      --wave2: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 60V20C100 44 220 52 340 30S560 -4 720 20s300 40 440 14 220-16 280-6V60Z'/%3E%3C/svg%3E");
+    }
+
+    .band { padding-block: var(--band); position: relative; --c: var(--paper); --wave: var(--wave1); }
+    .band.w2 { --wave: var(--wave2); }
+    .band::before {
+      content: ""; position: absolute; left: 0; right: 0; top: 0;
+      height: clamp(28px, 5vw, 64px);
+      transform: translateY(calc(-100% + 1px));
+      background: var(--c);
+      -webkit-mask: var(--wave) center / 100% 100% no-repeat;
+      mask: var(--wave) center / 100% 100% no-repeat;
+    }
+    main, footer { overflow-x: clip; }
+    .edge-layer { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+    .hero-bg { position: relative; }
+    .hero-bg .blob { z-index: 0; }
+    .hero { position: relative; z-index: 1; }
+    .curve { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+    .curve path { fill: none; stroke: var(--teal); stroke-width: 1.5; }
+    .band > .wrap { position: relative; z-index: 1; }
+
+    .blob { position: absolute; z-index: 0; pointer-events: none; display: block; }
+    .blob.coral { background: var(--coral); }
+    .blob.amber { background: var(--amber); }
+    .blob.teal  { background: var(--teal); }
+    .band.teal  { background: var(--teal);  --c: var(--teal); }
+    .band.coral { background: var(--coral); --c: var(--coral); }
+    .band.amber { background: var(--amber); --c: var(--amber); }
+    .band.ink   { background: var(--ink); color: var(--paper); --c: var(--ink); }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: center;
+    }
+
+    .about-grid img { mix-blend-mode: multiply; width: 100%; }
+
+    .about-copy h2 { margin-bottom: 1.75rem; }
+    .about-copy p { max-width: 60ch; font-size: clamp(1.125rem, 1.6vw, 1.3rem); }
+    .about-copy p + p { margin-top: 1.1rem; }
+
+    .social { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; margin-top: 1.75rem; font-weight: 600; }
+    .social a { display: inline-flex; align-items: center; gap: .5rem; }
+
+    /* Skills */
+    .skills h2 { margin-bottom: 3rem; }
+
+    .skill-list {
+      list-style: none; margin: 0; padding: 0;
+      display: flex; flex-wrap: wrap; gap: 2.5rem 3rem;
+    }
+
+    .skill-list li { display: flex; flex-direction: column; align-items: center; gap: .6rem; width: 5.5rem; }
+    .skill-list img { width: 64px; height: 64px; object-fit: contain; transition: transform .4s var(--ease-out); }
+    .skill-list li:hover img { transform: translateY(-6px) rotate(-4deg); }
+    .skill-list span { font-size: .9rem; font-weight: 600; text-align: center; }
+
+    /* Projects */
+    .project { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(2rem, 6vw, 5rem); align-items: center; }
+    .project.flip { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+    .project.flip figure { order: 2; }
+
+    .project figure { margin: 0; overflow: hidden; border-radius: clamp(1.5rem, 4vw, 3rem) clamp(3rem, 9vw, 7rem) clamp(1.5rem, 4vw, 3rem) clamp(3rem, 9vw, 7rem); }
+    .project figure img { width: 100%; transition: transform .8s var(--ease-out); }
+    .project:hover figure img { transform: scale(1.035); }
+
+    .project h3 { margin-bottom: 1.25rem; }
+    .project p { max-width: 52ch; }
+    .project .actions { margin-top: 1.75rem; display: flex; gap: .75rem; flex-wrap: wrap; }
+
+    .band.ink .btn { background: var(--amber); border-color: var(--amber); color: var(--ink); }
+    .band.ink .btn.ghost { background: transparent; color: var(--paper); border-color: var(--paper); }
+    .band.ink .btn.ghost:hover { background: var(--paper); color: var(--ink); }
+
+    /* Contact */
+    .contact h2 { margin-bottom: 2rem; }
+
+    .contact .mail {
+      display: inline-block;
+      font: 800 clamp(1.5rem, 5.4vw, 3.75rem)/1.05 var(--font-display);
+      letter-spacing: -.03em;
+      color: var(--amber);
+      overflow-wrap: anywhere;
+    }
+
+    .contact ul {
+      list-style: none; margin: 3rem 0 0; padding: 0;
+      display: flex; flex-wrap: wrap; gap: 1rem 2rem; font-weight: 600;
+    }
+    .contact ul a { display: inline-flex; align-items: center; gap: .6rem; }
+
+    .foot { margin-top: 4rem; font-size: .95rem; opacity: .75; }
+
+    /* ───────── Responsive ───────── */
+    @media (max-width: 52rem) {
+      .hero-main, .about-grid, .project, .project.flip { grid-template-columns: minmax(0, 1fr); }
+      .project.flip figure { order: 0; }
+      .overprint { width: min(100%, 22rem); order: -1; }
+      .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .about-grid > img { max-width: 24rem; }
+    }
+
+    @media (max-width: 30rem) {
+      .site-nav ul { gap: .9rem; }
+      .site-nav a { font-size: .95rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .pigment { animation: none; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-nav">
+    <nav class="wrap" aria-label="Principal">
+      <a href="#top" aria-label="Carocromatica, inicio"><img src="./svg/logo.svg" alt=""></a>
+      <ul>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero-bg">
+      <i class="blob amber" aria-hidden="true" style="left:-7vw;top:-1.5rem;width:clamp(9rem,25vw,23rem);height:clamp(7rem,20vw,18rem);border-radius:41% 59% 48% 52% / 58% 40% 60% 42%;rotate:-12deg"></i>
+      <i class="blob coral" aria-hidden="true" style="left:clamp(6rem,17vw,16rem);top:.5rem;width:clamp(3rem,7vw,6rem);height:clamp(2.5rem,5.5vw,5rem);border-radius:58% 42% 63% 37% / 46% 57% 43% 54%;rotate:15deg"></i>
+      <i class="blob teal" aria-hidden="true" style="right:-10vw;bottom:-7rem;width:clamp(14rem,38vw,36rem);height:clamp(11rem,26vw,24rem);border-radius:62% 38% 45% 55% / 41% 62% 38% 59%;rotate:-8deg"></i>
+      <svg class="curve" viewBox="0 0 1440 800" preserveAspectRatio="none" aria-hidden="true"><path d="M-20 700C250 760 420 420 640 520S980 700 1180 430 1380 240 1470 330" vector-effect="non-scaling-stroke"/></svg>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-main">
+        <div>
+          <h1 id="hero-title">Caro&shy;cromática</h1>
+          <p class="hero-role">Desarrolladora Front-end y Diseñadora Gráfica</p>
+          <div class="hero-cta">
+            <a class="btn" href="#projects">Ver proyectos</a>
+            <a class="btn ghost" href="./cv/Carolina%20torres%20cv%202018.pdf">Descargar CV</a>
+          </div>
+        </div>
+        <div class="overprint" aria-hidden="true">
+          <span class="pigment t"></span>
+          <span class="pigment a"></span>
+          <span class="pigment c"></span>
+        </div>
+      </div>
+
+      <ul class="strip" aria-label="Proyectos destacados">
+        <li><a href="#ecogo"><img src="./svg/ecogo.png" alt=""><span>EcoGO!</span></a></li>
+        <li><a href="#synapse"><img src="./svg/synapp.png" alt=""><span>Synapse Social Network</span></a></li>
+        <li><a href="#translab"><img src="./svg/translab.png" alt=""><span>Translab</span></a></li>
+        <li><a href="#pinterest"><img src="./svg/pinterest.png" alt=""><span>Pinterest Replica</span></a></li>
+      </ul>
+    </section>
+    </div>
+
+    <section id="about" class="band teal" aria-labelledby="about-title">
+      <i class="blob amber" aria-hidden="true" style="left:-8vw;bottom:-3rem;width:clamp(9rem,22vw,20rem);height:clamp(6rem,14vw,13rem);border-radius:41% 59% 48% 52% / 58% 40% 60% 42%;rotate:-10deg"></i>
+      <i class="blob coral" aria-hidden="true" style="right:-5vw;top:1.5rem;width:clamp(7rem,15vw,13rem);height:clamp(5rem,10vw,9rem);border-radius:58% 42% 63% 37% / 46% 57% 43% 54%;rotate:14deg"></i>
+      <div class="wrap about-grid">
+        <img src="./svg/foto.png" alt="Retrato de Carolina Torres" width="700" height="515">
+        <div class="about-copy">
+          <h2 id="about-title">Sobre mí</h2>
+          <p>Hola, me llamo Carolina Torres, aunque me puedes encontrar como Carocromatica. Soy Desarrolladora Front-end y Diseñadora Gráfica de profesión. Entusiasta de la tecnología, las comunicaciones y el diseño visual. Mi foco es desarrollar soluciones óptimas e innovadoras en aplicaciones y experiencias digitales. Soy colaborativa, proactiva y creativa.</p>
+          <p>Estoy en un constante proceso de aprendizaje; la investigación y la experimentación son clave para seguir creciendo profesionalmente.</p>
+          <p>Puedes descargar mi CV <a href="./cv/Carolina%20torres%20cv%202018.pdf">aquí</a> y encontrarme en:</p>
+          <div class="social">
+            <a href="https://github.com/carocromatica" target="_blank" rel="noopener"><i class="fab fa-github-alt" aria-hidden="true"></i> GitHub</a>
+            <a href="https://www.behance.net/carocromatica" target="_blank" rel="noopener"><i class="fab fa-behance" aria-hidden="true"></i> Behance</a>
+            <a href="https://www.linkedin.com/in/carocromatica/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="band w2 skills" aria-labelledby="skills-title">
+      <i class="blob amber" aria-hidden="true" style="right:-8vw;top:0;width:clamp(11rem,28vw,26rem);height:clamp(5rem,9vw,8rem);border-radius:62% 38% 45% 55% / 41% 62% 38% 59%;rotate:6deg"></i>
+      <i class="blob teal" aria-hidden="true" style="left:-9vw;bottom:-1rem;width:clamp(11rem,26vw,24rem);height:clamp(5rem,9vw,8rem);border-radius:58% 42% 63% 37% / 46% 57% 43% 54%;rotate:-6deg"></i>
+      <div class="wrap">
+        <h2 id="skills-title">Tech Skills</h2>
+        <ul class="skill-list">
+          <li><img src="./svg/js.png" alt=""><span>JavaScript</span></li>
+          <li><img src="./svg/html.png" alt=""><span>HTML5</span></li>
+          <li><img src="./svg/css.png" alt=""><span>CSS3</span></li>
+          <li><img src="./svg/react.png" alt=""><span>React.js</span></li>
+          <li><img src="./svg/firebase.png" alt=""><span>Firebase</span></li>
+          <li><img src="./svg/materialize.png" alt=""><span>Materialize</span></li>
+          <li><img src="./svg/bootstrap.png" alt=""><span>Bootstrap</span></li>
+          <li><img src="./svg/git.png" alt=""><span>Git</span></li>
+          <li><img src="./svg/github.png" alt=""><span>GitHub</span></li>
+          <li><img src="./svg/photoshop.png" alt=""><span>Photoshop</span></li>
+          <li><img src="./svg/illustrator.png" alt=""><span>Illustrator</span></li>
+          <li><img src="./svg/xd.png" alt=""><span>Adobe XD</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" aria-label="Proyectos realizados">
+      <h2 class="visually-hidden">Proyectos realizados</h2>
+
+      <article id="ecogo" class="band coral">
+      <i class="blob amber" aria-hidden="true" style="right:-8vw;top:.5rem;width:clamp(10rem,24vw,22rem);height:clamp(4.5rem,8vw,7rem);border-radius:41% 59% 48% 52% / 58% 40% 60% 42%;rotate:8deg"></i>
+      <i class="blob teal" aria-hidden="true" style="left:-8vw;bottom:-1rem;width:clamp(9rem,20vw,18rem);height:clamp(4rem,7vw,6.5rem);border-radius:58% 42% 63% 37% / 46% 57% 43% 54%;rotate:-8deg"></i>
+        <div class="wrap project">
+          <figure><img src="./svg/ecogo.png" alt="Pantallas de la app EcoGO!" width="800" height="622" loading="lazy"></figure>
+          <div>
+            <h3>EcoGO!</h3>
+            <p>EcoGO! fue el proyecto ganador de la Hackaton "Open House Laboratoria". Es una propuesta que busca incentivar el reciclaje a través de la gamificación y utilizando las API de geolocalización de HERE. Desarrollado totalmente con JavaScript, el proyecto además utiliza validación con QR, autentificación y almacenamiento de datos en Firebase y conexión a Facebook.</p>
+            <div class="actions">
+              <a class="btn" href="https://carocromatica.github.io/Proyecto-Here/" target="_blank" rel="noopener"><i class="fas fa-play-circle" aria-hidden="true"></i> Demo</a>
+              <a class="btn ghost" href="https://github.com/carocromatica/Proyecto-Here" target="_blank" rel="noopener"><i class="fas fa-code" aria-hidden="true"></i> Code</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article id="synapse" class="band w2 ink">
+      <i class="blob teal" aria-hidden="true" style="left:-9vw;top:.5rem;width:clamp(10rem,24vw,22rem);height:clamp(4.5rem,8vw,7rem);border-radius:62% 38% 45% 55% / 41% 62% 38% 59%;rotate:-6deg"></i>
+      <i class="blob coral" aria-hidden="true" style="right:-7vw;bottom:-1rem;width:clamp(9rem,20vw,18rem);height:clamp(4rem,7vw,6.5rem);border-radius:41% 59% 48% 52% / 58% 40% 60% 42%;rotate:10deg"></i>
+        <div class="wrap project flip">
+          <figure><img src="./svg/synapp.png" alt="Pantallas de Synapse Social Network" width="800" height="622" loading="lazy"></figure>
+          <div>
+            <h3>Synapse Social Network</h3>
+            <p>Synapse es una red social enfocada al aprendizaje. Es mi primer proyecto desarrollado con React, cuenta con autentificación con Firebase y Google.</p>
+            <div class="actions">
+              <a class="btn" href="https://carocromatica.github.io/synapp/" target="_blank" rel="noopener"><i class="fas fa-play-circle" aria-hidden="true"></i> Demo</a>
+              <a class="btn ghost" href="https://github.com/carocromatica/synapp" target="_blank" rel="noopener"><i class="fas fa-code" aria-hidden="true"></i> Code</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article id="translab" class="band amber">
+      <i class="blob coral" aria-hidden="true" style="right:-8vw;top:.5rem;width:clamp(10rem,24vw,22rem);height:clamp(4.5rem,8vw,7rem);border-radius:58% 42% 63% 37% / 46% 57% 43% 54%;rotate:8deg"></i>
+      <i class="blob teal" aria-hidden="true" style="left:-8vw;bottom:-1rem;width:clamp(9rem,20vw,18rem);height:clamp(4rem,7vw,6.5rem);border-radius:62% 38% 45% 55% / 41% 62% 38% 59%;rotate:-8deg"></i>
+        <div class="wrap project">
+          <figure><img src="./svg/translab.png" alt="Pantallas de la app Translab" width="800" height="622" loading="lazy"></figure>
+          <div>
+            <h3>Translab</h3>
+            <p>Translab es un pequeño, pero práctico proyecto que simula una APP. Su objetivo es almacenar y calcular las cargas de las tarjetas Bip! Utiliza Firebase, consumo de API y está desarrollado totalmente con JavaScript.</p>
+            <div class="actions">
+              <a class="btn" href="https://carocromatica.github.io/TranslabFirebase/src/" target="_blank" rel="noopener"><i class="fas fa-play-circle" aria-hidden="true"></i> Demo</a>
+              <a class="btn ghost" href="https://github.com/carocromatica/TranslabFirebase" target="_blank" rel="noopener"><i class="fas fa-code" aria-hidden="true"></i> Code</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article id="pinterest" class="band w2 teal">
+      <i class="blob amber" aria-hidden="true" style="left:-8vw;top:.5rem;width:clamp(10rem,24vw,22rem);height:clamp(4.5rem,8vw,7rem);border-radius:41% 59% 48% 52% / 58% 40% 60% 42%;rotate:-8deg"></i>
+      <i class="blob coral" aria-hidden="true" style="right:-7vw;bottom:-1rem;width:clamp(9rem,20vw,18rem);height:clamp(4rem,7vw,6.5rem);border-radius:58% 42% 63% 37% / 46% 57% 43% 54%;rotate:12deg"></i>
+        <div class="wrap project flip">
+          <figure><img src="./svg/pinterest.png" alt="Réplica de Pinterest en varios dispositivos" width="1000" height="732" loading="lazy"></figure>
+          <div>
+            <h3>Pinterest Replica</h3>
+            <p>Réplica de Pinterest realizada con React. Utiliza consumo de API, además de su propio buscador para cargar las imágenes. Diseño responsivo realizado solo con CSS.</p>
+            <div class="actions">
+              <a class="btn" href="https://carocromatica.github.io/svalley/" target="_blank" rel="noopener"><i class="fas fa-play-circle" aria-hidden="true"></i> Demo</a>
+              <a class="btn ghost" href="https://github.com/carocromatica/svalley" target="_blank" rel="noopener"><i class="fas fa-code" aria-hidden="true"></i> Code</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer id="contact" class="band w2 ink contact">
+      <div class="edge-layer" aria-hidden="true">
+      <i class="blob coral" aria-hidden="true" style="left:-8vw;top:.5rem;width:clamp(9rem,20vw,18rem);height:clamp(4rem,7vw,6.5rem);border-radius:41% 59% 48% 52% / 58% 40% 60% 42%;rotate:-10deg"></i>
+      <i class="blob teal" aria-hidden="true" style="right:-9vw;bottom:-2rem;width:clamp(12rem,30vw,28rem);height:clamp(8rem,17vw,15rem);border-radius:62% 38% 45% 55% / 41% 62% 38% 59%;rotate:-10deg"></i>
+      <i class="blob amber" aria-hidden="true" style="right:clamp(8rem,22vw,20rem);bottom:-3rem;width:clamp(5rem,10vw,9rem);height:clamp(4rem,7vw,6rem);border-radius:58% 42% 63% 37% / 46% 57% 43% 54%;rotate:16deg"></i>
+      </div>
+    <div class="wrap">
+      <h2>Contacto</h2>
+      <a class="mail" href="mailto:ca.torresduran@gmail.com">ca.torresduran@gmail.com</a>
+      <ul>
+        <li><a href="https://github.com/carocromatica" target="_blank" rel="noopener"><i class="fab fa-github-alt" aria-hidden="true"></i> GitHub</a></li>
+        <li><a href="https://www.behance.net/carocromatica" target="_blank" rel="noopener"><i class="fab fa-behance" aria-hidden="true"></i> Behance</a></li>
+        <li><a href="https://www.linkedin.com/in/carocromatica/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a></li>
+        <li><a href="./cv/Carolina%20torres%20cv%202018.pdf"><i class="far fa-file-alt" aria-hidden="true"></i> Curriculum</a></li>
+        <li><a href="https://app.talento.laboratoria.la/profile/8ibsIIPkJ1aaruHDT4MYyW7eWAL2" target="_blank" rel="noopener"><i class="fas fa-code" aria-hidden="true"></i> Talento Laboratoria</a></li>
+      </ul>
+      <p class="foot">© Carolina Torres · Carocromatica</p>
+    </div>
+  </footer>
+</body>
+
+</html>
